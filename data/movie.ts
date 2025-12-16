@@ -1,5 +1,5 @@
 // data/movies.ts
-export const movies = [
+export const MOVIES = [
     {
         id: 1,
         title: "Mai",
