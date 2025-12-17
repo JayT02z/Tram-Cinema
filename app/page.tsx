@@ -130,7 +130,7 @@ export default function Home() {
                                 e.stopPropagation(); // Ngăn việc chọn phim khi bấm nút Play
                                 setTrailerId(movie.youtubeId);
                               }}
-                              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20"
+                              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 cursor-pointer"
                           >
                             <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/50 hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors text-white">
                               <PlayCircle size={32} fill="currentColor" className="opacity-90" />
@@ -158,33 +158,6 @@ export default function Home() {
         </main>
 
         {/* 4. Bottom Bar */}
-        {selectedIds.length > 0 && (
-            <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] p-4 z-40 animate-in slide-in-from-bottom duration-300">
-              <div className="container mx-auto max-w-5xl flex items-center justify-between">
-                <div className="flex flex-col">
-                  <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">Danh sách chọn</span>
-                  <span className="text-xl font-bold text-gray-900">{selectedIds.length} phim</span>
-                </div>
-
-                <div className="flex gap-3">
-                  <button
-                      onClick={() => setSelectedIds([])}
-                      className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition-colors"
-                  >
-                    <X size={18} />
-                  </button>
-
-                  <button
-                      onClick={() => alert(`ID Phim: ${selectedIds.join(', ')}`)}
-                      className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-bold flex items-center gap-2 shadow-lg shadow-red-200 active:scale-95 transition-all"
-                  >
-                    <ShoppingBag size={18} />
-                    <span>Hoàn tất</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-        )}
 
         {/* 5. Modal Trailer (Popup) */}
         {trailerId && (
