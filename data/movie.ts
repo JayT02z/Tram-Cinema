@@ -73,7 +73,7 @@ export const MOVIES = [
     {
         id: 260,
         title: "Thám tử kiên - kỳ án không đầu",
-        image: "https://www.cgv.vn/media/catalog/product/cache/3/image/1800x/71252117777b696995f01934522c402d/3/5/350x495-ttk.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/vi/4/49/Tham_tu_kien.jpg",
         category: "Kinh dị",
         country: "Việt Nam",
         type: "Gốc",
