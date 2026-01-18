@@ -1,188 +1,278 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
-import { Check, Film, ShoppingBag, X, PlayCircle, Filter } from 'lucide-react';
+// Đảm bảo đã import đúng đường dẫn ảnh banner
+// import bannerImage from '@/public/banner.png'; // Nếu bạn muốn import cứng
+import { Film, X, PlayCircle, Filter } from 'lucide-react';
 import { MOVIES } from "@/data/movie";
 
 export default function Home() {
-  const [selectedIds, setSelectedIds] = useState<number[]>([]);
-  const [trailerId, setTrailerId] = useState<string | null>(null); // State lưu ID trailer đang xem
+    const [trailerId, setTrailerId] = useState<string | null>(null);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-  // State cho bộ lọc
-  const [filterCategory, setFilterCategory] = useState('All');
-  const [filterCountry, setFilterCountry] = useState('All');
-  const [filterType, setFilterType] = useState('All');
+    const [filterCategory, setFilterCategory] = useState('All');
+    const [filterCountry, setFilterCountry] = useState('All');
+    const [filterType, setFilterType] = useState('All');
 
-  // Lấy danh sách duy nhất cho các option bộ lọc
-  const categories = ['All', ...Array.from(new Set(MOVIES.map(m => m.category)))];
-  const countries = ['All', ...Array.from(new Set(MOVIES.map(m => m.country)))];
-  const types = ['All', ...Array.from(new Set(MOVIES.map(m => m.type)))];
+    const categories = ['All', ...Array.from(new Set(MOVIES.map(m => m.category)))];
+    const countries = ['All', ...Array.from(new Set(MOVIES.map(m => m.country)))];
+    const types = ['All', ...Array.from(new Set(MOVIES.map(m => m.type)))];
 
-  // Logic lọc phim
-  const filteredMovies = useMemo(() => {
-    return MOVIES.filter(movie => {
-      const matchCat = filterCategory === 'All' || movie.category === filterCategory;
-      const matchCountry = filterCountry === 'All' || movie.country === filterCountry;
-      const matchType = filterType === 'All' || movie.type === filterType;
-      return matchCat && matchCountry && matchType;
-    });
-  }, [filterCategory, filterCountry, filterType]);
+    const filteredMovies = useMemo(() => {
+        return MOVIES.filter(movie => {
+            const matchCat = filterCategory === 'All' || movie.category === filterCategory;
+            const matchCountry = filterCountry === 'All' || movie.country === filterCountry;
+            const matchType = filterType === 'All' || movie.type === filterType;
+            return matchCat && matchCountry && matchType;
+        }).sort((a, b) => {
+            // Sắp xếp theo id giảm dần (phim mới nhất lên đầu)
+            return b.id - a.id;
+        });
+    }, [filterCategory, filterCountry, filterType]);
 
-  const toggleMovie = (id: number) => {
-    if (selectedIds.includes(id)) {
-      setSelectedIds(selectedIds.filter((itemId) => itemId !== id));
-    } else {
-      setSelectedIds([...selectedIds, id]);
-    }
-  };
+    // Handle scroll effect for header
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsScrolled(scrollPosition > 100);
+        };
 
-  return (
-      <div className="min-h-screen bg-gray-50 pb-32 font-sans">
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-        {/* 1. Header */}
-        <header className="bg-white sticky top-0 z-20 shadow-sm">
-          <div className="px-4 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="bg-red-600 p-2 rounded-lg text-white">
-                <Film size={20}/>
-              </div>
-              <h1 className="font-bold text-lg text-gray-900">CineStore</h1>
-            </div>
-            <div className="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-              {filteredMovies.length} phim
-            </div>
-          </div>
-
-          {/* 2. Bộ lọc (Filters) */}
-          <div className="px-4 pb-3 flex gap-2 overflow-x-auto no-scrollbar">
-            <select
-                className="appearance-none bg-gray-100 text-gray-900 font-medium text-sm border border-gray-200 rounded-lg py-2 px-4 focus:ring-2 focus:ring-red-500 focus:bg-white outline-none cursor-pointer transition-colors"
-                value={filterCategory}
-                onChange={(e) => setFilterCategory(e.target.value)}
-            >
-              {categories.map(c => <option key={c} value={c}>{c === 'All' ? 'Tất cả thể loại' : c}</option>)}
-            </select>
-
-            <select
-                className="appearance-none bg-gray-100 text-gray-900 font-medium text-sm border border-gray-200 rounded-lg py-2 px-4 focus:ring-2 focus:ring-red-500 focus:bg-white outline-none cursor-pointer transition-colors"
-                value={filterCountry}
-                onChange={(e) => setFilterCountry(e.target.value)}
-            >
-              {countries.map(c => <option key={c} value={c}>{c === 'All' ? 'Tất cả QG' : c}</option>)}
-            </select>
-
-            <select
-                className="appearance-none bg-gray-100 text-gray-900 font-medium text-sm border border-gray-200 rounded-lg py-2 px-4 focus:ring-2 focus:ring-red-500 focus:bg-white outline-none cursor-pointer transition-colors"
-                value={filterType}
-                onChange={(e) => setFilterType(e.target.value)}
-            >
-              {types.map(c => <option key={c} value={c}>{c === 'All' ? 'Tất cả loại' : c}</option>)}
-            </select>
-          </div>
-        </header>
-
-        {/* 3. Danh sách phim */}
-        <main className="p-4 container mx-auto max-w-5xl">
-          {filteredMovies.length === 0 ? (
-              <div className="text-center py-20 text-gray-400">
-                <Filter size={48} className="mx-auto mb-2 opacity-20"/>
-                <p>Không tìm thấy phim nào</p>
-              </div>
-          ) : (
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {filteredMovies.map((movie) => {
-                  const isSelected = selectedIds.includes(movie.id);
-
-                  return (
-                      <div
-                          key={movie.id}
-                          // Click vào card để chọn phim
-                          onClick={() => toggleMovie(movie.id)}
-                          className={`
-                    relative group cursor-pointer rounded-xl overflow-hidden transition-all duration-200 border-2 bg-white
-                    ${isSelected ? 'border-red-500 ring-2 ring-red-200' : 'border-transparent hover:shadow-lg'}
-                  `}
-                      >
-                        {/* Poster Area */}
-                        <div className="aspect-[2/3] relative bg-gray-200">
-                          <Image
-                              src={movie.image}
-                              alt={movie.title}
-                              fill
-                              className={`object-cover transition-transform duration-500 ${isSelected ? 'scale-105' : 'group-hover:scale-105'}`}
-                              sizes="(max-width: 768px) 50vw, 25vw"
-                          />
-
-                          {/* Badge: Quốc gia & Loại (Góc trên) */}
-                          <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
-                      <span className="text-[10px] font-bold bg-black/70 text-white px-2 py-0.5 rounded backdrop-blur-sm border border-white/20">
-                        {movie.country}
-                      </span>
-                            <span className="text-[10px] font-bold bg-red-600 text-white px-2 py-0.5 rounded shadow-sm">
-                        {movie.type}
-                      </span>
-                          </div>
-
-                          {/* Nút Xem Trailer (Giữa ảnh) */}
-                          <button
-                              onClick={(e) => {
-                                e.stopPropagation(); // Ngăn việc chọn phim khi bấm nút Play
-                                setTrailerId(movie.youtubeId);
-                              }}
-                              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 cursor-pointer"
-                          >
-                            <div className="bg-white/20 backdrop-blur-md p-3 rounded-full border border-white/50 hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors text-white">
-                              <PlayCircle size={32} fill="currentColor" className="opacity-90" />
-                            </div>
-                          </button>
-
-                          {/* Icon đã chọn (Check) */}
-                          {isSelected && (
-                              <div className="absolute top-2 right-2 bg-red-500 text-white p-1 rounded-full shadow-lg z-10 animate-in zoom-in">
-                                <Check size={14} strokeWidth={4} />
-                              </div>
-                          )}
+    return (
+        <div className="min-h-screen bg-gray-50 pb-32 font-sans">
+            {/* 1. Header - Fixed sticky header with dynamic background */}
+            <header className={`fixed top-0 left-0 right-0 z-30 backdrop-blur-md transition-all duration-500 ease-out ${
+                isScrolled 
+                    ? 'bg-black/90 shadow-xl border-b border-red-500/30 backdrop-blur-lg' 
+                    : 'bg-transparent hover:bg-black/30'
+            }`}>
+                {/* Top row - Brand and movie count */}
+                <div className="px-4 py-3 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <div className={`p-2 rounded-lg text-white border transition-all duration-300 ${
+                            isScrolled 
+                                ? 'bg-red-600 border-red-500' 
+                                : 'bg-red-600/80 backdrop-blur-sm border-white/20'
+                        }`}>
+                            <Film size={20}/>
                         </div>
+                        <h1 className="font-bold text-lg text-white drop-shadow-lg">Tram Cinema</h1>
+                    </div>
+                    <div className={`text-xs font-medium text-white px-3 py-1 rounded-full border transition-all duration-300 ${
+                        isScrolled 
+                            ? 'bg-red-600/80 border-red-500/50' 
+                            : 'bg-white/20 backdrop-blur-sm border-white/30'
+                    }`}>
+                        {filteredMovies.length} phim
+                    </div>
+                </div>
 
-                        {/* Info Area */}
-                        <div className="p-3">
-                          <h3 className="font-bold text-sm text-gray-800 line-clamp-1">{movie.title}</h3>
-                          <p className="text-xs text-gray-500 mt-1">{movie.category}</p>
-                        </div>
-                      </div>
-                  );
-                })}
-              </div>
-          )}
-        </main>
+                {/* Bottom row - Filters */}
+                <div className="px-4 pb-3 flex gap-2 overflow-x-auto no-scrollbar">
+                    <select
+                        className={`appearance-none text-white font-medium text-sm border rounded-lg py-2 px-4 focus:ring-2 focus:ring-white/50 outline-none cursor-pointer transition-all min-w-[120px] ${
+                            isScrolled 
+                                ? 'bg-gray-800/80 border-gray-600 focus:bg-gray-700' 
+                                : 'bg-white/20 backdrop-blur-sm border-white/30 focus:bg-white/30'
+                        }`}
+                        value={filterCategory}
+                        onChange={(e) => setFilterCategory(e.target.value)}
+                    >
+                        {categories.map(c => <option key={c} value={c} className="text-gray-900 bg-white">{c === 'All' ? 'Tất cả thể loại' : c}</option>)}
+                    </select>
 
-        {/* 4. Bottom Bar */}
+                    <select
+                        className={`appearance-none text-white font-medium text-sm border rounded-lg py-2 px-4 focus:ring-2 focus:ring-white/50 outline-none cursor-pointer transition-all min-w-[100px] ${
+                            isScrolled 
+                                ? 'bg-gray-800/80 border-gray-600 focus:bg-gray-700' 
+                                : 'bg-white/20 backdrop-blur-sm border-white/30 focus:bg-white/30'
+                        }`}
+                        value={filterCountry}
+                        onChange={(e) => setFilterCountry(e.target.value)}
+                    >
+                        {countries.map(c => <option key={c} value={c} className="text-gray-900 bg-white">{c === 'All' ? 'Tất cả QG' : c}</option>)}
+                    </select>
 
-        {/* 5. Modal Trailer (Popup) */}
-        {trailerId && (
-            <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
-              <div className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20">
-                {/* Nút đóng Modal */}
-                <button
-                    onClick={() => setTrailerId(null)}
-                    className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md transition-colors"
-                >
-                  <X size={24} />
-                </button>
+                    <select
+                        className={`appearance-none text-white font-medium text-sm border rounded-lg py-2 px-4 focus:ring-2 focus:ring-white/50 outline-none cursor-pointer transition-all min-w-[100px] ${
+                            isScrolled 
+                                ? 'bg-gray-800/80 border-gray-600 focus:bg-gray-700' 
+                                : 'bg-white/20 backdrop-blur-sm border-white/30 focus:bg-white/30'
+                        }`}
+                        value={filterType}
+                        onChange={(e) => setFilterType(e.target.value)}
+                    >
+                        {types.map(c => <option key={c} value={c} className="text-gray-900 bg-white">{c === 'All' ? 'Tất cả loại' : c}</option>)}
+                    </select>
+                </div>
+            </header>
 
-                {/* Youtube Embed */}
-                <iframe
-                    src={`https://www.youtube.com/embed/${trailerId}?autoplay=1`}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                />
-              </div>
-              {/* Click ra ngoài để đóng */}
-              <div className="absolute inset-0 -z-10" onClick={() => setTrailerId(null)}></div>
-            </div>
-        )}
-      </div>
-  );
+            {/* --- ENHANCED HERO BANNER WITH EFFECTS --- */}
+            <section className="relative w-full h-screen sm:h-[85vh] md:h-[90vh] lg:h-[95vh] bg-gradient-to-br from-red-900 via-orange-800 to-red-600 overflow-hidden group">
+                {/* Background Image with Parallax Effect */}
+                <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
+                    <Image
+                        src="/banner.png"
+                        alt="Tram Cinema Banner"
+                        fill
+                        className="object-cover object-center transition-all duration-1000 ease-out opacity-90 group-hover:opacity-100"
+                        priority
+                        quality={95}
+                    />
+                </div>
+
+                {/* Gradient Overlay - Enhanced with multiple layers */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 via-transparent to-orange-900/40"></div>
+
+                {/* Animated particles/dots effect */}
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse delay-100"></div>
+                    <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-300"></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse delay-500"></div>
+                    <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-orange-300 rounded-full animate-pulse delay-700"></div>
+                </div>
+
+                {/* Hero Content */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 pt-20">
+                    {/* Main Title */}
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+                        <span className="bg-gradient-to-r from-red-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent drop-shadow-lg">
+                            Tram
+                        </span>
+                        <span className="ml-2 text-white drop-shadow-2xl">
+                            Cinema
+                        </span>
+                    </h1>
+
+                    {/* Subtitle */}
+                    <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+                        Khám phá thế giới điện ảnh với những bộ phim đặc sắc nhất
+                    </p>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
+                        <button className="group/btn px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-600/30 active:scale-95">
+                            <span className="flex items-center gap-2">
+                                <PlayCircle size={20} className="transition-transform group-hover/btn:rotate-12" />
+                                Xem Ngay
+                            </span>
+                        </button>
+                        <button className="px-8 py-4 border-2 border-white/80 hover:border-white text-white hover:bg-white/10 font-bold rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
+                            Khám Phá Thêm
+                        </button>
+                    </div>
+                </div>
+
+                {/* Bottom Wave Effect */}
+                <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-20 md:h-24 lg:h-28">
+                    <svg
+                        viewBox="0 0 1200 120"
+                        preserveAspectRatio="none"
+                        className="w-full h-full fill-gray-50"
+                    >
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                              className="opacity-30"></path>
+                        <path d="M0,72.05V120H1200V21.22C1146.58,42.03,1087.5,65.68,1040.4,72.05,985.11,79.07,927.52,78.22,876.38,74.31,825.24,70.4,780.65,63.42,734.12,57.7,687.59,51.98,639.12,47.52,590.65,43.06,542.18,38.6,493.71,34.14,445.24,29.68,396.77,25.22,348.3,20.76,300.83,16.3,253.36,11.84,206.89,7.38,159.42,2.92,111.95-1.54,63.48-6,15.01-10.46V72.05Z"
+                              className="opacity-60"></path>
+                        <path d="M0,72.05V120H1200V21.22c-54.42,20.81-113.5,44.46-160.6,50.83-55.29,7.02-112.88,6.17-164.02,2.26-51.14-3.91-95.73-10.89-142.26-16.61S645.54,47.52,597.07,43.06s-96.47-8.92-144.94-13.38S355.66,20.76,308.19,16.3s-94.47-8.92-141.94-13.38S70.78,7.38,23.31,2.92,23.31-1.54,23.31-10.46V72.05Z"
+                              className="opacity-100"></path>
+                    </svg>
+                </div>
+            </section>
+            {/* --- END ENHANCED HERO BANNER --- */}
+
+            {/* 2. Danh sách phim (Main Content) */}
+            <main className="pt-32 sm:pt-36 p-4 container mx-auto max-w-5xl">
+                {/* ... (Giữ nguyên nội dung bên trong Main) ... */}
+                {filteredMovies.length === 0 ? (
+                    <div className="text-center py-20 text-gray-400">
+                        <Filter size={48} className="mx-auto mb-2 opacity-20"/>
+                        <p>Không tìm thấy phim nào</p>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        {filteredMovies.map((movie) => {
+                            return (
+                                <div
+                                    key={movie.id}
+                                    // Click vào bất kỳ đâu trên card để mở trailer
+                                    onClick={() => setTrailerId(movie.youtubeId)}
+                                    className="relative group cursor-pointer rounded-xl transition-all duration-200 border-2 bg-white border-transparent hover:shadow-xl hover:border-red-500/30 hover:scale-105 transform"
+                                >
+                                    {/* Poster Area */}
+                                    <div className="aspect-[2/3] relative bg-gray-200 rounded-xl overflow-hidden">
+                                        <Image
+                                            src={movie.image}
+                                            alt={movie.title}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                            sizes="(max-width: 768px) 50vw, 25vw"
+                                        />
+
+                                        {/* Badge: Quốc gia & Loại (Góc trên trái) */}
+                                        <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
+                                            <span className="text-[10px] font-bold bg-black/70 text-white px-2 py-0.5 rounded backdrop-blur-sm border border-white/20">
+                                                {movie.country}
+                                            </span>
+                                            <span className="text-[10px] font-bold bg-red-600 text-white px-2 py-0.5 rounded shadow-sm">
+                                                {movie.type}
+                                            </span>
+                                        </div>
+
+                                        {/* Dải băng "Mới" ở góc trên phải */}
+                                        {movie.new && (
+                                            <div className="absolute top-2 right-2 z-20">
+                                                <div className="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg border-2 border-white transform -rotate-12 animate-pulse">
+                                                    MỚI
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {/* Overlay tối khi hover */}
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                                    </div>
+
+                                    {/* Info Area */}
+                                    <div className="p-3">
+                                        <h3 className="font-bold text-sm text-gray-800 line-clamp-1">{movie.title}</h3>
+                                        <p className="text-xs text-gray-500 mt-1">{movie.category}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
+            </main>
+
+            {/* 3. Modal Trailer */}
+            {trailerId && (
+                <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
+                    {/* ... nội dung modal ... */}
+                    <div className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20">
+                        {/* Nút đóng Modal */}
+                        <button
+                            onClick={() => setTrailerId(null)}
+                            className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md transition-colors"
+                        >
+                            <X size={24} />
+                        </button>
+
+                        {/* Youtube Embed */}
+                        <iframe
+                            src={`https://www.youtube.com/embed/${trailerId}?autoplay=1`}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                    <div className="absolute inset-0 -z-10" onClick={() => setTrailerId(null)}></div>
+                </div>
+            )}
+        </div>
+    );
 }

@@ -1,13 +1,393 @@
 // data/movies.ts
 export const MOVIES = [
     {
+        id: 267,
+        title: "Tiểu Yêu Quái Núi Lãng (2025)",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-nobodu_1.jpg",
+        category: "Hoạt hình",
+        country: "Trung Quốc",
+        type: "Vietsub",
+        youtubeId: "D6vLPsyMSUY",
+        new: true
+    },
+    {
+        id: 266,
+        title: "Tay Anh Giữ Một Vì Sao – Love Barista (2025)",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/t/a/tay_anh_giu_mo_t_vi_sao_-_payoff_poster_-_kho_i_chie_u_03.10.2025.jpg",
+        category: "Hài",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "ZsSYbAy2Ez8",
+        new: true
+    },
+    {
+        id: 265,
+        title: "Avatar 3: Lửa và Tro tàn (2025)",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/g/cgv_350x495_1_2.jpg",
+        category: "Hành Động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "lMH_cVX5pGI",
+        new: true
+    },
+    {
+        id: 264,
+        title: "Vong nhi cúp bế",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/d/h/dh-mainposter-0112.jpg",
+        category: "Kinh dị",
+        country: "Nhật Bản",
+        type: "Vietsub",
+        youtubeId: "KdZ6dH11PPA",
+        new: true
+    },
+    {
+        id: 263,
+        title: "Làm giàu với ma 2: Cuộc chiến hột xoàn",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-lgvm2_1.jpg",
+        category: "Hài",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "qq4l_rficuw",
+        new: true
+    },
+    {
+        id: 262,
+        title: "Mang mẹ đi bỏ",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/m/m/mm_b_poster_teaser2_fa_70x100cm_digital_1_.jpg",
+        category: "Tâm lý",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "yF2pXRJictA",
+        new: true
+    },
+    {
+        id: 261,
+        title: "Mưa đỏ",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-muado_1.jpg",
+        category: "Hành động",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "BD6PoZJdt_M",
+        new: true
+    },
+    {
+        id: 260,
+        title: "Thám tử kiên - kỳ án không đầu",
+        image: "https://www.cgv.vn/media/catalog/product/cache/3/image/1800x/71252117777b696995f01934522c402d/3/5/350x495-ttk.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "QiXNbEKF3U0",
+        new: true
+    },
+    {
+        id: 259,
+        title: "Địa Đạo: Mặt Trời Trong Bóng Tối",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-diadao_1.jpg",
+        category: "Lịch sử",
+        country: "Việt Nam",
+        type: "Vietsub",
+        youtubeId: "xh6IDHjvytU",
+        new: true
+    },
+    {
+        id: 258,
+        title: "Dưới đáy hồ",
+        image: "https://cdn.galaxycine.vn/media/2025/6/3/duoi-day-ho-p-500_1748921679301.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "YwhsUOqUOpE",
+        new: true
+    },
+    {
+        id: 257,
+        title: "Bộ tứ báo thủ",
+        image: "https://www.cgv.vn/media/catalog/product/cache/3/image/1800x/71252117777b696995f01934522c402d/3/5/350x495-btbt_1.jpg",
+        category: "Hài",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "zKMOgOWn8lQ",
+        new: true
+    },
+    {
+        id: 256,
+        title: "Nhà Gia Tiên",
+        image: "https://cdn.galaxycine.vn/media/2025/2/17/nha-gia-tien-500_1739775156127.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Vietsub",
+        youtubeId: "5b5oEQotzXo",
+        new: true
+    },
+    {
+        id: 255,
+        title: "Doraemon: Nobita và Cuộc phiêu lưu vào thế giới trong tranh",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/o/copy_of_250220_dr25_main_b1_localized_embbed_1_.jpg",
+        category: "Hoạt hình",
+        country: "Nhật Bản",
+        type: "Vietsub/Lồng tiếng",
+        youtubeId: "Qs-yOanuK9c",
+        new: true
+    },
+    {
+        id: 254,
+        title: "Zootopia: Phi vụ động trời 2",
+        image: "https://upload.wikimedia.org/wikipedia/vi/5/52/Zootopia2.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub/Lồng tiếng",
+        youtubeId: "4iWVnVg33Pc",
+        new: true
+    },
+    {
+        id: 253,
+        title: "Thanh gươm diệt quỷ: Vô hạn thành",
+        image: "https://cdn.moveek.com/storage/media/cache/tall/67c9174a864fa606990538.jpg",
+        category: "Hoạt hình",
+        country: "Nhật Bản",
+        type: "Vietsub",
+        youtubeId: "BSkUboiyeCo",
+        new: true
+    },
+    {
+        id: 252,
+        title: "Bạch Tuyết",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/s/n/snow_white_-_vn_payoff_-_1sheet.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "EgLJj6ua9fw",
+        new: true
+    },
+    {
+        id: 251,
+        title: "LILO & STITCH",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/g/cgv_350x495-stitch.png",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "9qhrQqijrOU",
+        new: true
+    },{
+        id: 250,
+        title: "Natra 2: Ma đồng náo hải",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsy7PGmcMAgpTqNPcerozy7jdK7w-j4xa5hg&s",
+        category: "Hoạt hình",
+        country: "Trung Quốc",
+        type: "Vietsub",
+        youtubeId: "ETlOSBR92Fs",
+        new: true
+    },{
+        id: 249,
+        title: "Elio Cậu bé đến từ Trái đất",
+        image: "https://cdn.galaxycine.vn/media/2025/6/26/elio-500_1750930369252.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "8qyk6dgwcKs",
+        new: true
+    },{
+        id: 248,
+        title: "Quái Thú Đại Náo Sở Thú",
+        image: "https://simg.zalopay.com.vn/zlp-website/assets/phim_hoat_hinh_chieu_rap_80_005b954bf4.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "FdqP73ZuNic",
+        new: true
+    },{
+        id: 247,
+        title: "Bí Kíp Luyện Rồng",
+        image: "https://simg.zalopay.com.vn/zlp-website/assets/phim_hoat_hinh_chieu_rap_6_75e4fdaab5.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "xpWLaHtfyxg",
+        new: true
+    },{
+        id: 246,
+        title: "Thám Tử Lừng Danh Conan: Dư Ảnh Của Độc Nhãn",
+        image: "https://simg.zalopay.com.vn/zlp-website/assets/phim_hoat_hinh_chieu_rap_1_bfe8a1f974.jpg",
+        category: "Hoạt hình",
+        country: "Nhật Bản",
+        type: "Vietsub/Lồng tiếng",
+        youtubeId: "dz5mN-iIC4g",
+        new: true
+    },{
+        id: 245,
+        title: "Xì Trum",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/7/0/700x1000-smurfs.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "wn-rx2oumsw",
+        new: true
+    },{
+        id: 244,
+        title: "Quái Thú Vô Hình: Vùng Đất Chết Chóc – Predator: Badlands (2025)",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6aPy2tMgQLVz2IcifrL1Z2Q9u1t.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "AzBi73ddou4",
+        new: true
+    },{
+        id: 243,
+        title: "Minecraft: The Movie",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrFIx_aIQRy6d8bBzRlwLbQUTAJuxLIANqQHgMWsM7Dh0d-Fo7NG_bT_a2UUsCmhwQdeFycNg2B-RnlgD0hYoELurkeEAYRP6PpzWfRD_H&s=10",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "c7FisB876Ek",
+        new: true
+    },{
+        id: 242,
+        title: "Kẻ vô danh 2",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/n/b/nb2_poolposter_470x700.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "rTpeRfGM23M",
+        new: true
+    },{
+        id: 241,
+        title: "Phi Vụ Thế Kỷ 3: Thoắt Ẩn Thoắt Hiện – Now You See Me: Now You Don’t (2025)",
+        image: "https://cdn.galaxycine.vn/media/2025/11/24/now-you-see-me-500_1763957863013.jpg",
+        category: "Giật gân",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "hg2YUkIvAg0",
+        new: true
+    },{
+        id: 240,
+        title: "Anh Trai Say Xe – The First Ride (2025)",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nfim1WDatD7732BM364oAQvsFnW.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "uB94gXmcxR4",
+        new: true
+    },
+    {
+        id: 239,
+        title: "Họng súng vô tình",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAbk3HaMMUHL1OTCtKNev8C6PR-VydKPnhSg&s",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "GHwhgxthTFI",
+        new: true
+    },{
+        id: 238,
+        title: "Trăm Dặm Tử Thần ",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_tram_dam_tu_than_3.jpg",
+        category: "Giật gân",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "j_FghUMcBP0",
+        new: true
+    },{
+        id: 237,
+        title: "Kế Hoạch Bảo Vệ Gia Đình 2",
+        image: "https://media.themoviedb.org/t/p/w600_and_h900_face/fMQI7VEpvlPOoSetYd3ctLEY54G.jpg",
+        category: "Hài",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "dqolYtJGuf4",
+        new: true
+    },{
+        id: 236,
+        title: "Nhiệm vụ bất khả thi - Nghiệp báo cuối cùng",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/m/i/mi8_poster_470x700_1.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "no2HdwAX8jI",
+        new: true
+    },
+    {
+        id: 235,
+        title: "F1",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_f1_6_1_.jpg",
+        category: "Tâm lý",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "YwB1w3V5V3I",
+        new: true
+    },{
+        id: 234,
+        title: "Thế giới khủng long: Tái sinh",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/j/w/jw4_sjquetzart_470x700.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "F175sCpwXbo",
+        new: true
+    },{
+        id: 233,
+        title: "The Conjuring: Nghi Lễ Cuối Cùng",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sjvW985erG7NSKJScFNhLbjhyma.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "sbsNPOzdBg0",
+        new: true
+    },{
+        id: 232,
+        title: "Dính Lẹo – Together (2025)",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/mHheVgcXINVdZTyzSyGQf33evc2.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "bhd-CKFeXM0",
+        new: true
+    },{
+        id: 231,
+        title: "Zombie cưng của ba",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470wx700h-zombie_1.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "WxrYCewy19A",
+        new: true
+    },{
+        id: 230,
+        title: "Huyền Thoại – HIM (2025)",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/tUndheUCbTxc2gyP7ckMCZNg9Ds.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "hpEy0iOixb4",
+        new: true
+    },{
+        id: 229,
+        title: "Exit 8 - Ga Tàu Vô Tận",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdqhED7D1k2QnzTqDiPTI9UTzfr.jpg",
+        category: "Kinh dị",
+        country: "Nhật Bản",
+        type: "Vietsub",
+        youtubeId: "YXR0tMXhnog",
+        new: true
+    },{
+        id: 228,
+        title: "Hồn ma giếng Suriram",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yEJuc55kaaWjj3tABr6i78kM1Oz.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "KQNnd-HSV2s",
+        new: true
+    },
+    {
         id: 1,
         title: "Mai",
         image: "https://www.elle.vn/wp-content/uploads/2023/12/06/560540/poster-Mai-scaled.jpg",
         category: "Tâm lý",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "Yz96EBNwMGw"
+        youtubeId: "Yz96EBNwMGw",
+        new: false
     },
     {
         id: 2,
@@ -16,7 +396,8 @@ export const MOVIES = [
         category: "Tâm lý",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "JcJ-wemgVbQ"
+        youtubeId: "JcJ-wemgVbQ",
+        new: false
     },
     {
         id: 3,
@@ -25,7 +406,8 @@ export const MOVIES = [
         category: "Tâm lý",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "IkaP0KJWTsQ"
+        youtubeId: "IkaP0KJWTsQ",
+        new: false
     },
     {
         id: 4,
@@ -34,7 +416,8 @@ export const MOVIES = [
         category: "Tâm lý",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "MjxPoqCvvVs"
+        youtubeId: "MjxPoqCvvVs",
+        new: false
     },
     {
         id: 5,
@@ -43,7 +426,8 @@ export const MOVIES = [
         category: "Tình cảm",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "XU4oplOtoQo"
+        youtubeId: "XU4oplOtoQo",
+        new: false
     },
     {
         id: 6,
@@ -52,7 +436,8 @@ export const MOVIES = [
         category: "Tình cảm",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "79BznZKQwIQ"
+        youtubeId: "79BznZKQwIQ",
+        new: false
     },
     {
         id: 7,
@@ -61,16 +446,18 @@ export const MOVIES = [
         category: "Tâm lý",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "Gggw9jwr1h4"
+        youtubeId: "Gggw9jwr1h4",
+        new: false
     },
     {
         id: 8,
         title: "Công tử bạc liêu",
         image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/_/c_ng_t_b_c_li_u_-_payoff_poster_-_kc_06.12.2024_1_.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "7oVbS8zQxQ0",
+        new: false
     },
     {
         id: 9,
@@ -79,22 +466,14 @@ export const MOVIES = [
         category: "Tình cảm",
         country: "Việt Nam",
         type: "Gốc",
-        youtubeId: "MtZ_hf7tLxk"
-    },
-    {
-        id: 9,
-        title: "Bộ tứ báo thủ",
-        image: "https://www.cgv.vn/media/catalog/product/cache/3/image/1800x/71252117777b696995f01934522c402d/3/5/350x495-btbt_1.jpg",
-        category: "Hài hước",
-        country: "Việt Nam",
-        type: "Gốc",
-        youtubeId: "zKMOgOWn8lQ"
+        youtubeId: "MtZ_hf7tLxk",
+        new: false
     },
     {
         id: 10,
         title: "Trên bàn nhậu dưới bàn mưu",
         image: "https://metiz.vn/media/poster_film/teaser_poster_-_social_1_.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "rZYVIK0R6sg"
@@ -134,15 +513,6 @@ export const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "xh6IDHjvytU"
-    },
-    {
-        id: 15,
-        title: "Thám tử kiên - kỳ án không đầu",
-        image: "https://www.cgv.vn/media/catalog/product/cache/3/image/1800x/71252117777b696995f01934522c402d/3/5/350x495-ttk.jpg",
-        category: "Kinh dị",
-        country: "Việt Nam",
-        type: "Gốc",
-        youtubeId: "QiXNbEKF3U0"
     },
     {
         id: 16,
@@ -234,15 +604,6 @@ export const MOVIES = [
         youtubeId: "nAYKaslCXPc"
     },
     {
-        id: 26,
-        title: "Exit 8 - Ga Tàu Vô Tận",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/1800x/71252117777b696995f01934522c402d/e/x/exit8-teaser_poster.jpg",
-        category: "Kinh dị",
-        country: "Nhật Bản",
-        type: "Vietsub",
-        youtubeId: "YXR0tMXhnog"
-    },
-    {
         id: 27,
         title: "28 năm sau hậu tận thế",
         image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/2/8/28yl_uk_online_1080x1350_black-hazard_05.jpg",
@@ -264,7 +625,7 @@ export const MOVIES = [
         id: 29,
         title: "404 - Chạy ngay đi",
         image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-404.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Thái Lan",
         type: "Vietsub",
         youtubeId: "bTJ-fHJopAI"
@@ -309,7 +670,7 @@ export const MOVIES = [
         id: 34,
         title: "Anh trai vượt mọi tam tai",
         image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/r/s/rsz_dc_main-poster_final.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "hBbndPyAPeg"
@@ -318,7 +679,7 @@ export const MOVIES = [
         id: 35,
         title: "Chàng nữ phi công",
         image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/0/406x600-pilot_1.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "MzrT5FL4W7g"
@@ -327,7 +688,7 @@ export const MOVIES = [
         id: 36,
         title: "Cô dâu hào môn",
         image: "https://cdn.galaxycine.vn/media/2024/10/18/co-dau-hao-mon-500_1729221052856.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "QJ8E9R70csY"
@@ -336,7 +697,7 @@ export const MOVIES = [
         id: 37,
         title: "Em xinh tinh quái",
         image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/c/pc-couple_poster-sun-ji.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "kiJtQfZ-3nw"
@@ -345,7 +706,7 @@ export const MOVIES = [
         id: 38,
         title: "Biệt đội săn ma - Kỷ nguyên băng giá",
         image: "https://upload.wikimedia.org/wikipedia/vi/2/23/Bi%E1%BB%87t_%C4%91%E1%BB%99i_s%C4%83n_ma_2024.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "Y4Fbcvq-9RU"
@@ -354,7 +715,7 @@ export const MOVIES = [
         id: 39,
         title: "Bỗng dưng trúng số",
         image: "https://upload.wikimedia.org/wikipedia/vi/e/ef/Bong_dung_trung_so.jpeg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "D3KbO3QF-lg"
@@ -363,7 +724,7 @@ export const MOVIES = [
         id: 40,
         title: "Con nhót mót chồng",
         image: "https://images2.thanhnien.vn/528068263637045248/2023/5/3/con-nhot-poser-16831069636091018563712.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "e7KHOQ-alqY"
@@ -372,7 +733,7 @@ export const MOVIES = [
         id: 42,
         title: "Đầu gấu đụng đầu đất",
         image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/b/e/bear-main-poster-printing.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "MagrY1rpOT4"
@@ -381,7 +742,7 @@ export const MOVIES = [
         id: 43,
         title: "Yêu lại vợ ngầu",
         image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/l/r/lr-main-poster-printing.jpg",
-        category: "Hài hước",
+        category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "081I7DXNknc"
@@ -460,24 +821,6 @@ export const MOVIES = [
         youtubeId: "8ZFsTMe9JDw"
     },
     {
-        id: 52,
-        title: "Họng súng vô tình",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAbk3HaMMUHL1OTCtKNev8C6PR-VydKPnhSg&s",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: "GHwhgxthTFI"
-    },
-    {
-        id: 53,
-        title: "Kẻ vô danh 2",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/n/b/nb2_poolposter_470x700.jpg",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: "rTpeRfGM23M"
-    },
-    {
         id: 54,
         title: "Những gã trai hư - chơi hay bị xơi - Bad boys 4",
         image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495_4_.jpg",
@@ -514,296 +857,13 @@ export const MOVIES = [
         youtubeId: "SthaOnp5uDs"
     },
     {
-        id: 57,
-        title: "Elio Cậu bé đến từ Trái đất",
-        image: "https://cdn.galaxycine.vn/media/2025/6/26/elio-500_1750930369252.jpg",
-        category: "Hoạt hình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: "8qyk6dgwcKs"
-    },
-    {
-        id: 60,
-        title: "Shin Ultraman",
-        image: "https://placehold.co/400x600/png?text=Shin+Ultraman",
-        category: "Viễn tưởng",
-        country: "Nhật Bản",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 61,
-        title: "Natra: Ma Đồng Giáng Thế",
-        image: "https://placehold.co/400x600/png?text=Natra+1",
-        category: "Hoạt hình",
-        country: "Trung Quốc",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 62,
-        title: "Minecraft: The Movie",
-        image: "https://placehold.co/400x600/png?text=Minecraft",
-        category: "Hoạt hình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    // --- PHIM VIỆT NAM (Tết & Mới nhất) ---
-    {
-        id: 63,
-        title: "Bộ Tứ Báo Thủ",
-        image: "https://placehold.co/400x600/png?text=Bo+Tu+Bao+Thu",
-        category: "Hài hước",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 64,
-        title: "Địa Đạo: Mặt Trời Trong Bóng Tối",
-        image: "https://placehold.co/400x600/png?text=Dia+Dao+2025",
-        category: "Lịch sử",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 65,
-        title: "Đố Anh Còng Được Tôi",
-        image: "https://placehold.co/400x600/png?text=Do+Anh+Cong+Duoc+Toi",
-        category: "Hành động",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 66,
-        title: "Hai Muối",
-        image: "https://placehold.co/400x600/png?text=Hai+Muoi",
-        category: "Tâm lý",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 67,
-        title: "Nhà Gia Tiên",
-        image: "https://placehold.co/400x600/png?text=Nha+Gia+Tien",
+        id: 0,
+        title: "Suzzanna: Lời nguyền đêm thứ Sáu",
+        image: "https://gaucafephim.vn/wp-content/uploads/2024/03/MV5BZGNkYmY2NzItNTE1NS00NWEzLTk5ZDktOWU5YzdhOWRmNTkxXkEyXkFqcGdeQXVyNTg2MDI2Njc@._V1_FMjpg_UX1000_-768x660.jpg",
         category: "Kinh dị",
-        country: "Việt Nam",
+        country: "Indonesia",
         type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 68,
-        title: "Trên Bàn Nhậu Dưới Bàn Mưu",
-        image: "https://placehold.co/400x600/png?text=Tren+Ban+Nhau",
-        category: "Hài hước",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 69,
-        title: "Chị Chị Em Em 2",
-        image: "https://placehold.co/400x600/png?text=Chi+Chi+Em+Em+2",
-        category: "Tâm lý",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 70,
-        title: "578: Phát Đạn Kẻ Điên",
-        image: "https://placehold.co/400x600/png?text=578+Phat+Dan",
-        category: "Hành động",
-        country: "Việt Nam",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-
-    // --- BOM TẤN HÀNH ĐỘNG & KINH DỊ ÂU MỸ CÒN LẠI ---
-    {
-        id: 71,
-        title: "Captain America: Brave New World",
-        image: "https://placehold.co/400x600/png?text=Captain+America+4",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 72,
-        title: "Superman: Legacy",
-        image: "https://placehold.co/400x600/png?text=Superman",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 73,
-        title: "Bad Boys 4: Chơi Hay Bị Xơi",
-        image: "https://placehold.co/400x600/png?text=Bad+Boys+4",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 74,
-        title: "Venom 3: Kèo Cuối (Thiện Ác Đối Đầu)",
-        image: "https://placehold.co/400x600/png?text=Venom+3",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 75,
-        title: "Sisu: Già Gân Báo Thù",
-        image: "https://placehold.co/400x600/png?text=Sisu",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 76,
-        title: "Blue Beetle",
-        image: "https://placehold.co/400x600/png?text=Blue+Beetle",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 77,
-        title: "Lưỡi Cưa X (Saw X)",
-        image: "https://placehold.co/400x600/png?text=Saw+X",
-        category: "Kinh dị",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 78,
-        title: "M3GAN 2.0",
-        image: "https://placehold.co/400x600/png?text=M3GAN+2",
-        category: "Kinh dị",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 79,
-        title: "The Conjuring: Nghi Lễ Cuối Cùng",
-        image: "https://placehold.co/400x600/png?text=The+Conjuring+4",
-        category: "Kinh dị",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 80,
-        title: "Cười (Smile)",
-        image: "https://placehold.co/400x600/png?text=Smile",
-        category: "Kinh dị",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 81,
-        title: "F1",
-        image: "https://placehold.co/400x600/png?text=F1+Movie",
-        category: "Hành động",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 82,
-        title: "Exit 8: Ga Tàu Vô Tận",
-        image: "https://placehold.co/400x600/png?text=Exit+8",
-        category: "Kinh dị",
-        country: "Nhật Bản",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-
-    // --- HOẠT HÌNH & LIVE ACTION ---
-    {
-        id: 83,
-        title: "Mèo Béo Garfield",
-        image: "https://placehold.co/400x600/png?text=The+Garfield+Movie",
-        category: "Hoạt hình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 84,
-        title: "Elio: Cậu Bé Đến Từ Trái Đất",
-        image: "https://placehold.co/400x600/png?text=Elio",
-        category: "Hoạt hình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 85,
-        title: "Xứ Sở Các Nguyên Tố (Elemental)",
-        image: "https://placehold.co/400x600/png?text=Elemental",
-        category: "Hoạt hình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 86,
-        title: "Nàng Bạch Tuyết (Live Action)",
-        image: "https://placehold.co/400x600/png?text=Snow+White",
-        category: "Gia đình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 87,
-        title: "Nàng Tiên Cá (Live Action)",
-        image: "https://placehold.co/400x600/png?text=The+Little+Mermaid",
-        category: "Gia đình",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 88,
-        title: "Thanh Gươm Diệt Quỷ: Vô Hạn Thành",
-        image: "https://placehold.co/400x600/png?text=Demon+Slayer",
-        category: "Hoạt hình",
-        country: "Nhật Bản",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 89,
-        title: "Doraemon: Nobita và Vùng Đất Lý Tưởng",
-        image: "https://placehold.co/400x600/png?text=Doraemon+Sky",
-        category: "Hoạt hình",
-        country: "Nhật Bản",
-        type: "Vietsub",
-        youtubeId: ""
-    },
-    {
-        id: 90,
-        title: "Conan: Nàng Dâu Halloween",
-        image: "https://placehold.co/400x600/png?text=Conan+Halloween",
-        category: "Hoạt hình",
-        country: "Nhật Bản",
-        type: "Vietsub",
-        youtubeId: ""
+        youtubeId: "W3OiJi8UyUk",
+        new: false
     }
 ];
