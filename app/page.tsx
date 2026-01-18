@@ -136,58 +136,11 @@ export default function Home() {
                     <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse delay-500"></div>
                     <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-orange-300 rounded-full animate-pulse delay-700"></div>
                 </div>
-
-                {/* Hero Content */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 pt-20">
-                    {/* Main Title */}
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-                        <span className="bg-gradient-to-r from-red-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent drop-shadow-lg">
-                            Tram
-                        </span>
-                        <span className="ml-2 text-white drop-shadow-2xl">
-                            Cinema
-                        </span>
-                    </h1>
-
-                    {/* Subtitle */}
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
-                        Khám phá thế giới điện ảnh với những bộ phim đặc sắc nhất
-                    </p>
-
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
-                        <button className="group/btn px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-600/30 active:scale-95">
-                            <span className="flex items-center gap-2">
-                                <PlayCircle size={20} className="transition-transform group-hover/btn:rotate-12" />
-                                Xem Ngay
-                            </span>
-                        </button>
-                        <button className="px-8 py-4 border-2 border-white/80 hover:border-white text-white hover:bg-white/10 font-bold rounded-full transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                            Khám Phá Thêm
-                        </button>
-                    </div>
-                </div>
-
-                {/* Bottom Wave Effect */}
-                <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-20 md:h-24 lg:h-28">
-                    <svg
-                        viewBox="0 0 1200 120"
-                        preserveAspectRatio="none"
-                        className="w-full h-full fill-gray-50"
-                    >
-                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                              className="opacity-30"></path>
-                        <path d="M0,72.05V120H1200V21.22C1146.58,42.03,1087.5,65.68,1040.4,72.05,985.11,79.07,927.52,78.22,876.38,74.31,825.24,70.4,780.65,63.42,734.12,57.7,687.59,51.98,639.12,47.52,590.65,43.06,542.18,38.6,493.71,34.14,445.24,29.68,396.77,25.22,348.3,20.76,300.83,16.3,253.36,11.84,206.89,7.38,159.42,2.92,111.95-1.54,63.48-6,15.01-10.46V72.05Z"
-                              className="opacity-60"></path>
-                        <path d="M0,72.05V120H1200V21.22c-54.42,20.81-113.5,44.46-160.6,50.83-55.29,7.02-112.88,6.17-164.02,2.26-51.14-3.91-95.73-10.89-142.26-16.61S645.54,47.52,597.07,43.06s-96.47-8.92-144.94-13.38S355.66,20.76,308.19,16.3s-94.47-8.92-141.94-13.38S70.78,7.38,23.31,2.92,23.31-1.54,23.31-10.46V72.05Z"
-                              className="opacity-100"></path>
-                    </svg>
-                </div>
             </section>
             {/* --- END ENHANCED HERO BANNER --- */}
 
             {/* 2. Danh sách phim (Main Content) */}
-            <main className="pt-32 sm:pt-36 p-4 container mx-auto max-w-5xl">
+            <main className="pt-32 sm:pt-20 p-4 container mx-auto max-w-5xl">
                 {/* ... (Giữ nguyên nội dung bên trong Main) ... */}
                 {filteredMovies.length === 0 ? (
                     <div className="text-center py-20 text-gray-400">
