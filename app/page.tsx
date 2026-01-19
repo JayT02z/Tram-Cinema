@@ -2,8 +2,6 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
-// Đảm bảo đã import đúng đường dẫn ảnh banner
-// import bannerImage from '@/public/banner.png'; // Nếu bạn muốn import cứng
 import { Film, X, PlayCircle, Filter } from 'lucide-react';
 import { MOVIES } from "@/data/movie";
 
@@ -112,29 +110,39 @@ export default function Home() {
             </header>
 
             {/* --- ENHANCED HERO BANNER WITH EFFECTS --- */}
-            <section className="relative w-full h-screen sm:h-[85vh] md:h-[90vh] lg:h-[95vh] bg-gradient-to-br from-red-900 via-orange-800 to-red-600 overflow-hidden group">
-                {/* Background Image with Parallax Effect */}
-                <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
+            <section className="relative w-full h-screen bg-orange-400 overflow-hidden group">
+
+                {/* 1. ẢNH CHO MOBILE (Chỉ hiện khi màn hình nhỏ < 768px) */}
+                <div className="block md:hidden absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
                     <Image
-                        src="/banner.png"
-                        alt="Tram Cinema Banner"
+                        src="/banner-mobile.jpg" // Nhớ đảm bảo bạn đã có file này
+                        alt="Tram Cinema Mobile"
                         fill
-                        className="object-cover object-center transition-all duration-1000 ease-out opacity-90 group-hover:opacity-100"
+                        className="object-contain object-center" // Ảnh dọc sẽ khớp với màn hình dọc
                         priority
-                        quality={95}
+                        quality={100}
                     />
                 </div>
 
-                {/* Gradient Overlay - Enhanced with multiple layers */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 via-transparent to-orange-900/40"></div>
+                {/* 2. ẢNH CHO DESKTOP (Chỉ hiện khi màn hình lớn >= 768px) */}
+                <div className="hidden md:block absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
+                    <Image
+                        src="/banner.png"
+                        alt="Tram Cinema Desktop"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                        quality={100}
+                    />
+                </div>
 
-                {/* Animated particles/dots effect */}
-                <div className="absolute inset-0 opacity-20">
+                {/* Gradient Overlay - Giữ nguyên hiệu ứng làm tối để chữ Header dễ đọc */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/40 pointer-events-none"></div>
+
+                {/* Animated particles - Giữ nguyên hiệu ứng đốm sáng */}
+                <div className="absolute inset-0 opacity-20 pointer-events-none">
                     <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse delay-100"></div>
                     <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-300"></div>
-                    <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse delay-500"></div>
-                    <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-orange-300 rounded-full animate-pulse delay-700"></div>
                 </div>
             </section>
             {/* --- END ENHANCED HERO BANNER --- */}
