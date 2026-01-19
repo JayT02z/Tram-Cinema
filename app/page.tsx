@@ -207,14 +207,6 @@ export default function Home() {
                 <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
                     {/* ... nội dung modal ... */}
                     <div className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20">
-                        {/* Nút đóng Modal */}
-                        <button
-                            onClick={() => setTrailerId(null)}
-                            className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md transition-colors"
-                        >
-                            <X size={24} />
-                        </button>
-
                         {/* Youtube Embed */}
                         <iframe
                             src={`https://www.youtube.com/embed/${trailerId}?autoplay=1`}
