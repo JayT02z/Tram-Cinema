@@ -92,12 +92,12 @@ export const MOVIES = [
     },
     {
         id: 258,
-        title: "Dưới đáy hồ",
-        image: "https://cdn.galaxycine.vn/media/2025/6/3/duoi-day-ho-p-500_1748921679301.jpg",
-        category: "Kinh dị",
-        country: "Việt Nam",
-        type: "Gốc",
-        youtubeId: "YwhsUOqUOpE",
+        title: "Zombie cưng của ba",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470wx700h-zombie_1.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "WxrYCewy19A",
         new: true
     },
     {
@@ -344,12 +344,12 @@ export const MOVIES = [
         new: true
     },{
         id: 231,
-        title: "Zombie cưng của ba",
-        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470wx700h-zombie_1.jpg",
-        category: "Hài",
-        country: "Hàn Quốc",
+        title: "28 năm sau hậu tận thế",
+        image: "https://cdn.galaxycine.vn/media/2025/6/20/28-year-later-500_1750407074215.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
         type: "Vietsub",
-        youtubeId: "WxrYCewy19A",
+        youtubeId: "fMrcIQZ4cto",
         new: true
     },{
         id: 230,
@@ -378,6 +378,286 @@ export const MOVIES = [
         type: "Vietsub",
         youtubeId: "KQNnd-HSV2s",
         new: true
+    },
+    {
+        id: 227,
+        title: "Cưới ma giải hạn",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-redenvelope.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "L7KuvLShQ_Y",
+        new: true
+    },{
+        id: 226,
+        title: "Ga tử thần",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/7/470wx700h_2.jpg",
+        category: "Kinh dị",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "e6xGn8GvRNc",
+        new: true
+    },{
+        id: 225,
+        title: "Đèn âm hồn",
+        image: "https://cdn.galaxycine.vn/media/2025/2/5/den-am-hon-500_1738745745581.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "PWdeLkzoJ5s",
+        new: true
+    },{
+        id: 224,
+        title: "Bộ tứ siêu đẳng",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/1800x/71252117777b696995f01934522c402d/f/f/ffour_028m_g_vie-vn_4x5_up.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "xJ3nz9_tj10",
+        new: true
+    },{
+        id: 223,
+        title: "Mưa trên cánh bướm",
+        image: "https://upload.wikimedia.org/wikipedia/vi/0/0a/M%C6%B0a_tr%C3%AAn_c%C3%A1nh_b%C6%B0%E1%BB%9Bm_-_Don%E2%80%99t_Cry%2C_Butterfly_%28poster%29.jpg",
+        category: "Tình cảm",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "EXhamQsxNqU",
+        new: true
+    },{
+        id: 222,
+        title: "Hồn ma xác mẹ",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/m/a/main_poster_1__3_2.jpg",
+        category: "Kinh dị",
+        country: "Indonesia",
+        type: "Vietsub",
+        youtubeId: "KDS_SAsG7qE",
+        new: false
+    },{
+        id: 221,
+        title: "Một nửa hoàn hảo",
+        image: "https://cdn.galaxycine.vn/media/2025/6/20/mot-nua-hoan-hao-500_1750391504780.jpg",
+        category: "Tình cảm",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "uy6nTrRgzIM",
+        new: false
+    },{
+        id: 220,
+        title: "Đêm thánh - Đội săn quỷ",
+        image: "https://cdn.galaxycine.vn/media/2025/5/6/holy-night-500_1746503995269.jpg",
+        category: "Kinh dị",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "VFWi7MzvhBI",
+        new: false
+    },{
+        id: 219,
+        title: "Giờ Mất Tích",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/lVY3xYt7ai6ahduq3D7F2z5wwin.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "0U9qK3rV1lE",
+        new: false
+    },{
+        id: 218,
+        title: "Hành trình rực rỡ ta đã yêu",
+        image: "https://cdn.galaxycine.vn/media/2025/10/2/hanh-trinh-ruc-ro-ta-da-yeu-500_1759396701841.jpg",
+        category: "Tình cảm",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "eZqesmtK1L4",
+        new: false
+    },{
+        id: 217,
+        title: "Paddington - Gấu thủ chu du",
+        image: "https://cdn.galaxycine.vn/media/2025/1/8/paddington-3-500_1736307755357.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "TdAz-ZYo5Sw",
+        new: false
+    },{
+        id: 216,
+        title: "Em xinh tinh quái",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/c/pc-couple_poster-sun-ji.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "kiJtQfZ-3nw",
+        new: false
+    },{
+        id: 215,
+        title: "404 - Chạy ngay đi",
+        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-404.jpg",
+        category: "Hài",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "bTJ-fHJopAI",
+        new: false
+    },{
+        id: 214,
+        title: "Giờ thả máu",
+        image: "https://cdn.galaxycine.vn/media/2025/7/28/gio-tha-mau-500_1753695981985.jpg",
+        category: "Giật gân",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "eNdY0qpL20s",
+        new: false
+    },{
+        id: 213,
+        title: "Tôi Có Bệnh Mới Thích Cậu",
+        image: "https://cdn.galaxycine.vn/media/2025/7/31/toi-co-benh-moi-thich-cau-500_1753944562739.jpg",
+        category: "Tình cảm",
+        country: "Trung Quốc",
+        type: "Vietsub",
+        youtubeId: "WlvYnndj9l4",
+        new: false
+    },{
+        id: 212,
+        title: "Chị đại cuồng sát",
+        image: "https://cdn.galaxycine.vn/media/2025/8/13/chi-dai-cuong-sat-500_1755069345479.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "vWZVw9aRwh0",
+        new: false
+    },{
+        id: 211,
+        title: "Nữ Tu Bóng Tối",
+        image: "https://cdn.galaxycine.vn/media/2025/2/11/dark-nuns-sneak-500_1739260872262.jpg",
+        category: "Kinh dị",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "PnlS4B0GPOA",
+        new: false
+    },{
+        id: 210,
+        title: "Halabala - Rừng ma tế xác",
+        image: "https://cdn.galaxycine.vn/media/2025/6/10/halaba-500_1749539454772.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "svKkKMHM8UU",
+        new: false
+    },{
+        id: 209,
+        title: "Tiếng vọng kinh hoàng",
+        image: "https://cdn.galaxycine.vn/media/2025/3/8/the-monkey-2_1741403107007.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "E_Xt-GKT1vc",
+        new: false
+    },{
+        id: 208,
+        title: "Captain America: Thế Giới Mới",
+        image: "https://cdn.galaxycine.vn/media/2025/2/10/captambravenewworld-500_1739183561790.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "Y3h6Noj_pEw",
+        new: false
+    },{
+        id: 207,
+        title: "Biệt Đội Sấm Sét",
+        image: "https://cdn.galaxycine.vn/media/2025/4/23/thunderbolts-500_1745395912649.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "FQ_3yVjvW6o",
+        new: false
+    },{
+        id: 206,
+        title: "Kẻ Đồng Hành",
+        image: "https://cdn.galaxycine.vn/media/2025/1/23/ke-dong-hanh-500_1737614978458.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "_GgntZm0k_c",
+        new: false
+    },{
+        id: 205,
+        title: "Sát Thủ Mắt Trái Tim",
+        image: "https://media.themoviedb.org/t/p/w600_and_h900_face/ebqttF1Vjgde6uSFBEw9mta7Hd3.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "1cRzZcMlJh8",
+        new: false
+    },{
+        id: 204,
+        title: "Tay Nghiệp Dư",
+        image: "https://cdn.galaxycine.vn/media/2025/3/28/tay-nghiep-du-500_1743148894221.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "W8w9iOqkP1U",
+        new: false
+    },{
+        id: 203,
+        title: "Karate Kid: Huyền thoại",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1HjRgF32LLXf5BJ1lh84cgq59x0FWgqk33g&s",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "LhRXf-yEQqA",
+        new: false
+    },{
+        id: 202,
+        title: "Superman",
+        image: "https://cdn.galaxycine.vn/media/2025/7/10/superman-500_1752140210619.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "QZbk3DtUpt0",
+        new: false
+    },{
+        id: 201,
+        title: "Điện thoại đen 2 ",
+        image: "https://cdn.galaxycine.vn/media/2025/10/27/black-phone-2-500_1761537100774.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "K4Ml_YDwfoU",
+        new: false
+    },{
+        id: 200,
+        title: "Nhân Diện",
+        image: "https://cdn.galaxycine.vn/media/2025/9/24/nhan-dien-500_1758685845886.jpg",
+        category: "Giật gân",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "LJ6VPGRnxsw",
+        new: false
+    },{
+        id: 199,
+        title: "Until Dawn: Bí Mật Kinh Hoàng",
+        image: "https://cdn.galaxycine.vn/media/2025/5/6/until-dawn-500_1746522709856.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "3z3fpXETgsU",
+        new: false
+    },{
+        id: 198,
+        title: "Sát thủ bọ ngựa",
+        image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-n8Bt92OfBPFEUIxIJaiTRLdsLhQ6mOUnZMIzgU1BUEYnmgmX",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "PItlVyrf15U",
+        new: false
+    },{
+        id: 197,
+        title: "Băng trộm săn vàng 2025",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBdcJX6DF93mwZafLgpMe5ATEhDMI8TBwTg&s",
+        category: "Hài",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "2MVjg_SXjgM",
+        new: false
     },
     {
         id: 1,
@@ -549,14 +829,6 @@ export const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "Z7AbUpnfcW8"
-    },{
-        id: 20,
-        title: "Mưa trên cánh bướm",
-        image: "https://upload.wikimedia.org/wikipedia/vi/0/0a/M%C6%B0a_tr%C3%AAn_c%C3%A1nh_b%C6%B0%E1%BB%9Bm_-_Don%E2%80%99t_Cry%2C_Butterfly_%28poster%29.jpg",
-        category: "Tình cảm",
-        country: "Việt Nam",
-        type: "Gốc",
-        youtubeId: "EXhamQsxNqU"
     },
     {
         id: 21,
@@ -611,24 +883,6 @@ export const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "fMrcIQZ4cto"
-    },
-    {
-        id: 28,
-        title: "Một nửa hoàn hảo",
-        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-materialists.jpg",
-        category: "Tình cảm",
-        country: "Âu Mỹ",
-        type: "Vietsub",
-        youtubeId: "IBQaCnPcGT4"
-    },
-    {
-        id: 29,
-        title: "404 - Chạy ngay đi",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-404.jpg",
-        category: "Hài",
-        country: "Thái Lan",
-        type: "Vietsub",
-        youtubeId: "bTJ-fHJopAI"
     },
     {
         id: 30,
@@ -692,15 +946,6 @@ export const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "QJ8E9R70csY"
-    },
-    {
-        id: 37,
-        title: "Em xinh tinh quái",
-        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/c/pc-couple_poster-sun-ji.jpg",
-        category: "Hài",
-        country: "Hàn Quốc",
-        type: "Vietsub",
-        youtubeId: "kiJtQfZ-3nw"
     },
     {
         id: 38,
