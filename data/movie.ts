@@ -33,7 +33,7 @@ export const MOVIES = [
         id: 265,
         title: "Avatar 3: Lửa và Tro tàn (2025)",
         image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/g/cgv_350x495_1_2.jpg",
-        category: "Hành Động",
+        category: "Hành động",
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "lMH_cVX5pGI",
@@ -1472,7 +1472,7 @@ export const MOVIES = [
         type: "Gốc",
         youtubeId: "wfvi4R0lb30"
     },{
-        id: 78,
+        id: 77,
         title: "Vây hãm: Không lối thoát",
         image: "https://media.themoviedb.org/t/p/w440_and_h660_face/jeRp9uQSt4IkpGPqR2iWviRUEsE.jpg",
         category: "Hành động",
@@ -1480,7 +1480,7 @@ export const MOVIES = [
         type: "Vietsub",
         youtubeId: "Efe7oVx27E4"
     },{
-        id: 77,
+        id: 76,
         title: "Thiện ác đối đầu 3",
         image: "https://cdn.galaxycine.vn/media/2023/8/28/equalizer-1_1693210797610.jpg",
         category: "Hành động",
@@ -1488,7 +1488,7 @@ export const MOVIES = [
         type: "Vietsub",
         youtubeId: "VEgaQviZZPM"
     },{
-        id: 76,
+        id: 75,
         title: "Đường cùng",
         image: "https://cdn.galaxycine.vn/media/2023/10/27/duong-cung-500_1698390217836.jpg",
         category: "Hành động",
