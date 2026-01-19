@@ -784,7 +784,7 @@ export const MOVIES = [
     {
         id: 184,
         title: "Công tử bạc liêu",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/_/c_ng_t_b_c_li_u_-_payoff_poster_-_kc_06.12.2024_1_.jpg",
+        image: "https://cdn.galaxycine.vn/media/2024/11/15/cong-tu-bac-lieu-500_1731641572864.jpg",
         category: "Hài",
         country: "Việt Nam",
         type: "Gốc",
@@ -896,7 +896,7 @@ export const MOVIES = [
     {
         id: 172,
         title: "Chàng nữ phi công",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/4/0/406x600-pilot_1.jpg",
+        image: "https://cdn.galaxycine.vn/media/2024/8/5/pilot-500_1722847726956.jpg",
         category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
@@ -923,7 +923,7 @@ export const MOVIES = [
     {
         id: 169,
         title: "Anh trai say hi - Kẻ phản diện tạo nên người hùng",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/a/t/atsh_mainposter_700x1000-min.jpg",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/a/t/atsh_mainposter_700x1000-min.jpg",
         category: "Tình cảm",
         country: "Việt Nam",
         type: "Gốc",
@@ -950,7 +950,7 @@ export const MOVIES = [
     {
         id: 166,
         title: "Godzilla x Kong - Đế chế mới",
-        image: "https://www.cgv.vn/media/catalog/product/cache/3/image/1800x/71252117777b696995f01934522c402d/p/m/pm1067intl_excl_3d_1080x1350px_enguk_v2_r1.jpg",
+        image: "https://cdn.galaxycine.vn/media/2024/4/1/god-x-kong-500_1711942287737.jpg",
         category: "Hành động",
         country: "Âu Mỹ",
         type: "Vietsub",
@@ -1317,7 +1317,7 @@ export const MOVIES = [
     {
         id: 97,
         title: "Yêu lại vợ ngầu 2023",
-        image: "https://www.cgv.vn/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/l/r/lr-main-poster-printing.jpg",
+        image: "https://cdn.galaxycine.vn/media/2023/11/6/lr-500_1699256438199.jpg",
         category: "Hài",
         country: "Hàn Quốc",
         type: "Vietsub",
@@ -1474,7 +1474,7 @@ export const MOVIES = [
     },{
         id: 78,
         title: "Vây hãm: Không lối thoát",
-        image: "https://static.khenphim.com/khenohim_media/2023/05/Round-Up-No-Way-Out-1-poster_KP.webp",
+        image: "https://i.imgur.com//ylfhvKe.jpg",
         category: "Hành động",
         country: "Hàn Quốc",
         type: "Vietsub",
@@ -1515,7 +1515,7 @@ export const MOVIES = [
     },{
         id: 48,
         title: "365 Ngày: Hôm Nay",
-        image: "https://st.download.com.vn/data/image/2022/04/28/365-Days-This-Day-200.png",
+        image: "https://duyendang.webcanhcam.vn/wp-content/uploads/2025/12/reviewphim365day6.jpeg",
         category: "Tình cảm",
         country: "Âu Mỹ",
         type: "Vietsub",
