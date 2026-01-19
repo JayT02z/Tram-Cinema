@@ -1474,7 +1474,7 @@ export const MOVIES = [
     },{
         id: 78,
         title: "Vây hãm: Không lối thoát",
-        image: "https://i.imgur.com//ylfhvKe.jpg",
+        image: "https://media.themoviedb.org/t/p/w440_and_h660_face/jeRp9uQSt4IkpGPqR2iWviRUEsE.jpg",
         category: "Hành động",
         country: "Hàn Quốc",
         type: "Vietsub",
