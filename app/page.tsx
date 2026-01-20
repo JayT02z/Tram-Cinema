@@ -2,8 +2,8 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
-import { Film, X, PlayCircle, Filter } from 'lucide-react';
-import { MOVIES } from "@/data/movie";
+import { Film, Filter } from 'lucide-react';
+import MOVIES from "@/data/movie";
 
 export default function Home() {
     const [trailerId, setTrailerId] = useState<string | null>(null);
@@ -40,6 +40,14 @@ export default function Home() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Scroll to the top of the movie list when filters are changed
+    useEffect(() => {
+        const movieListElement = document.querySelector('main');
+        if (movieListElement) {
+            movieListElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [filterCategory, filterCountry, filterType]);
+
     return (
         <div className="min-h-screen bg-gray-50 pb-32 font-sans">
             {/* 1. Header - Fixed sticky header with dynamic background */}
@@ -50,12 +58,13 @@ export default function Home() {
             }`}>
                 {/* Top row - Brand and movie count */}
                 <div className="px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <div className={`p-2 rounded-lg text-white border transition-all duration-300 ${
+                    <div className="flex items-center gap-2 ">
+                        {/* Add a click handler to the logo to reload the page */}
+                        <div className={`p-2 rounded-lg text-white border transition-all duration-300 cursor-pointer ${
                             isScrolled 
                                 ? 'bg-red-600 border-red-500' 
                                 : 'bg-red-600/80 backdrop-blur-sm border-white/20'
-                        }`}>
+                        }`} onClick={() => window.location.reload()}>
                             <Film size={20}/>
                         </div>
                         <h1 className="font-bold text-lg text-white drop-shadow-lg">Tram Cinema</h1>

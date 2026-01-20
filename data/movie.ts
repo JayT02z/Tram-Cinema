@@ -1,5 +1,5 @@
 // data/movies.ts
-export const MOVIES = [
+const MOVIES = [
     {
         id: 268,
         title: "Âm dương lộ 2025",
@@ -95,7 +95,7 @@ export const MOVIES = [
         image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-diadao_1.jpg",
         category: "Lịch sử",
         country: "Việt Nam",
-        type: "Vietsub",
+        type: "Gốc",
         youtubeId: "xh6IDHjvytU",
         new: true
     },
@@ -125,7 +125,7 @@ export const MOVIES = [
         image: "https://cdn.galaxycine.vn/media/2025/2/17/nha-gia-tien-500_1739775156127.jpg",
         category: "Kinh dị",
         country: "Việt Nam",
-        type: "Vietsub",
+        type: "Gốc",
         youtubeId: "5b5oEQotzXo",
         new: true
     },
@@ -135,7 +135,7 @@ export const MOVIES = [
         image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/c/o/copy_of_250220_dr25_main_b1_localized_embbed_1_.jpg",
         category: "Hoạt hình",
         country: "Nhật Bản",
-        type: "Lồng tiếng",
+        type: "Vietsub",
         youtubeId: "Qs-yOanuK9c",
         new: true
     },
@@ -145,7 +145,7 @@ export const MOVIES = [
         image: "https://upload.wikimedia.org/wikipedia/vi/5/52/Zootopia2.jpg",
         category: "Hoạt hình",
         country: "Âu Mỹ",
-        type: "Vietsub/Lồng tiếng",
+        type: "Vietsub",
         youtubeId: "4iWVnVg33Pc",
         new: true
     },
@@ -220,7 +220,7 @@ export const MOVIES = [
         image: "https://simg.zalopay.com.vn/zlp-website/assets/phim_hoat_hinh_chieu_rap_1_bfe8a1f974.jpg",
         category: "Hoạt hình",
         country: "Nhật Bản",
-        type: "Vietsub/Lồng tiếng",
+        type: "Vietsub",
         youtubeId: "dz5mN-iIC4g",
         new: true
     },{
@@ -383,7 +383,7 @@ export const MOVIES = [
         title: "Hồn ma giếng Suriram",
         image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yEJuc55kaaWjj3tABr6i78kM1Oz.jpg",
         category: "Kinh dị",
-        country: "Thái Lan",
+        country: "Maylaysia",
         type: "Vietsub",
         youtubeId: "KQNnd-HSV2s",
         new: true
@@ -502,7 +502,7 @@ export const MOVIES = [
         image: "https://cdn.galaxycine.vn/media/2024/12/27/404-500_1735272706136.jpg",
         category: "Hài",
         country: "Thái Lan",
-        type: "Vietsub/Lồng tiếng",
+        type: "Lồng tiếng",
         youtubeId: "bTJ-fHJopAI",
         new: false
     },{
@@ -728,7 +728,7 @@ export const MOVIES = [
         category: "Hành động",
         country: "Âu Mỹ",
         type: "Vietsub",
-        youtubeId: "XL48F7LGoig",
+        youtubeId: "lyivgZ074PY",
         new: false
     },
     {
@@ -888,7 +888,7 @@ export const MOVIES = [
         id: 173,
         title: "Dune 2: Hành Tinh Cát",
         image: "https://couplecinema.vn/wp-content/uploads/2024/04/3587a6cd29f779d19e235bc39b28d4a4-691x1024.jpg",
-        category: "Viễn tưởng",
+        category: "Hành động",
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "kCO-RO3q7U4"
@@ -1242,6 +1242,240 @@ export const MOVIES = [
         new: false
     },
     {
+        id: 133,
+        title: "Tình Người Duyên Ma: Tái Hợp",
+        image: "https://cdn.galaxycine.vn/media/2024/12/26/kang-mak-3_1735201342845.jpg",
+        category: "Hài",
+        country: "Indonesia",
+        type: "Vietsub",
+        youtubeId: "O3HTUAoCJ88"
+    },{
+        id: 132,
+        title: "Giao Ước Quỷ",
+        image: "https://cdn.galaxycine.vn/media/2023/12/26/the-verge-of-death-500_1703561616286.jpg",
+        category: "Kinh dị",
+        country: "Indonesia",
+        type: "Vietsub",
+        youtubeId: "CYcfpPrgXa8"
+    },{
+        id: 131,
+        title: "Xuyên không cải mệnh gia tộc",
+        image: "https://cdn.galaxycine.vn/media/2024/8/26/chinatown-cha-cha-500_1724657094609.jpg",
+        category: "Hài",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "OtNMMFrVegU"
+    },{
+        id: 130,
+        title: "Tiếng yêu không lời - Slient Love",
+        image: "https://cdn.galaxycine.vn/media/2024/3/8/tieng-yeu-khong-loi-500_1709869385632.jpg",
+        category: "Tình cảm",
+        country: "Nhật Bản",
+        type: "Vietsub",
+        youtubeId: "PCMpdWADIzY"
+    },{
+        id: 129,
+        title: "Quỷ thay đầu (Baghead)",
+        image: "https://cdn.galaxycine.vn/media/2024/2/19/baghead-500_1708317004756.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "RMPeNbgFbXg"
+    },{
+        id: 128,
+        title: "Quỷ tha ma bắt",
+        image: "https://cdn.galaxycine.vn/media/2025/5/29/qu-tha-ma-bat-500_1748503238035.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "p76CjOjWf8Y"
+    },{
+        id: 127,
+        title: "Mồ Tra Tấn",
+        image: "https://cdn.galaxycine.vn/media/2024/7/25/grave-torture-1_1721895911608.jpg",
+        category: "Kinh dị",
+        country: "Indonesia",
+        type: "Vietsub",
+        youtubeId: "KKKK8qptIJc"
+    },{
+        id: 126,
+        title: "Lọ lem chơi ngải",
+        image: "https://cdn.galaxycine.vn/media/2025/10/27/lo-lem-choi-ngai-500_1761538767400.jpg",
+        category: "Kinh dị",
+        country: "Indonesia",
+        type: "Vietsub",
+        youtubeId: "u0A17Cn7Yo0"
+    },{
+        id: 125,
+        title: "Vùng Đất Câm Lặng: Ngày Một",
+        image: "https://cdn.galaxycine.vn/media/2024/6/7/aqp-500_1717732454254.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "eD1O0wVwW7o"
+    },{
+        id: 124,
+        title: "Thầy trừ tà",
+        image: "https://cdn.galaxycine.vn/media/2024/6/5/exorcim-500_1717573379987.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "1jOY-WPqbsI"
+    },{
+        id: 123,
+        title: "Linh Hồn Vũ Nữ 2: Nghi Thức Hồi Sinh",
+        image: "https://cdn.galaxycine.vn/media/2024/5/28/lhvn-500_1716885771360.jpg",
+        category: "Kinh dị",
+        country: "Indonesia",
+        type: "Vietsub",
+        youtubeId: "fo0qhQqyksU"
+    },{
+        id: 122,
+        title: "Argylle Siêu Điệp Viên",
+        image: "https://cdn.galaxycine.vn/media/2024/1/12/argylle-500_1705031665490.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "SmjV2aHlxhk"
+    },{
+        id: 121,
+        title: "Furiosa: Câu Chuyện Từ Max Điên",
+        image: "https://cdn.galaxycine.vn/media/2024/5/24/furiosa-500_1716547292998.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "BUwndlpdbVU"
+    },{
+        id: 120,
+        title: "Atlas",
+        image: "https://m.media-amazon.com/images/M/MV5BNDUwNTFkNzYtMGM5NS00NTc4LWEwMDUtMmE5MzgyMjcwOWM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "Jokpt_LJpbw"
+    },{
+        id: 119,
+        title: "Dự án mật - Thảm họa trên cầu",
+        image: "https://cdn.galaxycine.vn/media/2024/7/2/project-silince-500_1719894451139.jpg",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "wuDaOwKCDmc"
+    },{
+        id: 118,
+        title: "Lift: Vụ trộm trên không",
+        image: "https://media.themoviedb.org/t/p/w440_and_h660_face/8BO3zMlWvWM7zquWAVXifXf5A6M.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "nBxJOhHNiCM"
+    },{
+        id: 117,
+        title: "Thợ săn hoang mạc",
+        image: "https://media.themoviedb.org/t/p/w440_and_h660_face/aMelXG1OBTHvvIz1lpSp5m5cjv0.jpg",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "rOZK710Kgs"
+    },{
+        id: 116,
+        title: "Madam Web",
+        image: "https://cdn.galaxycine.vn/media/2024/1/24/madame-web-500_1706063512367.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "_D12RvkYphg"
+    },{
+        id: 115,
+        title: "Vây hãm: Kẻ trừng phạt",
+        image: "https://cdn.galaxycine.vn/media/2024/4/26/roundup-500_1714102279125.jpg",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "h4okylxDB1Y"
+    },{
+        id: 114,
+        title: "Móng vuốt",
+        image: "https://cdn.galaxycine.vn/media/2024/6/6/mong-vuot-500-docx_1717644756258.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "uVuARLQdC8Y"
+    },{
+        id: 113,
+        title: "The Crow: Báo Thù",
+        image: "https://cdn.galaxycine.vn/media/2024/8/30/the-crow-500_1725012333336.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "-HJnPmDYJag"
+    },{
+        id: 112,
+        title: "The killers Game - Trò chơi tử thần",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJxuRMDdg3un_-zB0YXATGd6F5mdASxjY--A&s",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "ZHK6WghyWGY"
+    },{
+        id: 111,
+        title: "Trò chơi ảo giác - Ares",
+        image: "https://cdn.galaxycine.vn/media/2025/10/10/tron-ares-500_1760067381479.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "aJpOT4_dJXc"
+    },{
+        id: 110,
+        title: "Hào quang đẫm máu",
+        image: "https://cdn.galaxycine.vn/media/2024/4/5/wannbe-500_1712309020688.jpg",
+        category: "Giật gân",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "-FYXYc5wz9Q"
+    },{
+        id: 109,
+        title: "Lốc xoáy tử thần",
+        image: "https://cdn.galaxycine.vn/media/2024/6/28/twisters-500_1719558113896.jpg",
+        category: "Giật gân",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "Qtx3OuKXxRI"
+    },{
+        id: 108,
+        title: "Quái Vật Không Gian: Romulus",
+        image: "https://cdn.galaxycine.vn/media/2024/7/18/alien-romulus-500_1721273080878.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "GCubqFPehTw"
+    },{
+        id: 107,
+        title: "Không Nói Điều Dữ",
+        image: "https://cdn.galaxycine.vn/media/2024/9/9/speak-no-evil-500_1725875282848.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "T-TQAfES10g"
+    },{
+        id: 106,
+        title: "Thanh Gươm Trừ Tà",
+        image: "https://cdn.galaxycine.vn/media/2023/9/21/cheon-500_1695281331881.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "IJydCDfITpw"
+    },
+    {
+        id: 105,
+        title: "Lật mặt 6: Chiếc vé định mệnh",
+        image: "https://cdn.galaxycine.vn/media/2023/4/17/300wx450h_1681703428813.jpg",
+        category: "Tâm lý",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "2EnP2tVC00Q",
+        new: false
+    },{
         id: 104,
         title: "Nhà bà nữ",
         image: "https://cdn-i.doisongphapluat.com.vn/media/dang-nhat-duy/2022/12/03/poster-phim-tran-thanh-nha-ba-nu-dspl-31220221.jpg",
@@ -1300,7 +1534,7 @@ export const MOVIES = [
         id: 96,
         title: "Đất rừng phương nam",
         image: "https://cdn.galaxycine.vn/media/2023/10/16/datrungpn-3_1697433762119.jpg",
-        category: "Gia đình",
+        category: "Tình cảm",
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "DHa4MSOzPXw"
@@ -1381,7 +1615,7 @@ export const MOVIES = [
         image: "https://cdn-glx-2.galaxycloud.vn/tool/media/static.lib?sid=45&db681=1&type=ms&id=dc672061&media=image&name=imgPaste_1702648034.png&w=315",
         category: "Hoạt hình",
         country: "Âu Mỹ",
-        type: "Vietsub/Lồng tiếng",
+        type: "Lồng tiếng",
         youtubeId: "VXSIvn8iHUA"
     },{
         id: 88,
@@ -1497,6 +1731,32 @@ export const MOVIES = [
         youtubeId: "jN-_0m7ajPw"
     },
     {
+        id: 74,
+        title: "Tee yod - quỷ ăn tạng",
+        image: "https://cdn.galaxycine.vn/media/2023/12/12/ty-500_1702368995659.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "4oJKI7fMpUk"
+    },
+    {
+        id: 73,
+        title: "Tình người duyên ma: Ngoại truyện",
+        image: "https://cdn.galaxycine.vn/media/2023/4/30/300x450_1682824293266.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "udsNY4iGju0"
+    },{
+        id: 72,
+        title: "Missing - Mất tích",
+        image: "https://cdn.galaxycine.vn/media/2023/2/14/300x450_1676362323844.jpg",
+        category: "Giật gân",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "zl7LlstHTio"
+    },
+    {
         id: 50,
         title: "Bỗng dưng trúng số",
         image: "https://upload.wikimedia.org/wikipedia/vi/e/ef/Bong_dung_trung_so.jpeg",
@@ -1526,7 +1786,7 @@ export const MOVIES = [
         image: "https://cdn.galaxycine.vn/media/2022/6/24/900wx1350h1_1656065081813.jpg",
         category: "Hoạt hình",
         country: "Nhật Bản",
-        type: "Lồng tiếng",
+        type: "Vietsub",
         youtubeId: "V6qby0eZzlA"
     },{
         id: 46,
@@ -1594,12 +1854,20 @@ export const MOVIES = [
         youtubeId: "5PSNL1qE6VY"
     },{
         id: 17,
-        title: "Tình người duyên ma",
-        image: "https://upload.wikimedia.org/wikipedia/vi/thumb/d/dc/Pee_Mak_International_Poster.jpg/250px-Pee_Mak_International_Poster.jpg",
+        title: "Ngôi đền kỳ quái 3",
+        image: "https://cdn.galaxycine.vn/media/2022/4/5/1200x1800---copy_1649150515606.jpg",
         category: "Kinh dị",
         country: "Thái Lan",
         type: "Vietsub",
-        youtubeId: "lPts4HMXbmU"
+        youtubeId: "Rom6Om-eZDU"
+    },{
+        id: 16,
+        title: "LẬT MẶT: BA CHÀNG KHUYẾT",
+        image: "https://cdn.galaxycine.vn/media/2020/9/23/bhds-lat-ma-ba-chang-khuyet-poster_1600856737315.jpg",
+        category: "Hài",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "ACvEJobsJCA"
     },
     {
         id: 0,
@@ -1612,3 +1880,4 @@ export const MOVIES = [
         new: false
     }
 ];
+export default MOVIES
