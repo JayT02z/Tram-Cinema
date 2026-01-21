@@ -2139,6 +2139,22 @@ const MOVIES = [
         type: "Vietsub",
         youtubeId: "YSwYhvG0Hy4"
     },{
+        id: 27,
+        title: "Quỷ Ăn Hồn",
+        image: "https://cdn.galaxycine.vn/media/2025/7/1/qu-an-hon-500_1751344047763.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "92S2Jwp4aLY"
+    },{
+        id: 26,
+        title: "Nàng Bạch Tuyết",
+        image: "https://cdn.galaxycine.vn/media/2024/8/12/snow-white-500_1723432966462.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "JtdaIC1ifV8"
+    },{
         id: 20,
         title: "Hội ngộ diệu kỳ - CoCo",
         image: "https://cdn.galaxycine.vn/media/2020/10/6/900x1350_1601953430186.jpg",
