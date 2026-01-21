@@ -124,7 +124,7 @@ export default function Home() {
                 {/* 1. ẢNH CHO MOBILE (Chỉ hiện khi màn hình nhỏ < 768px) */}
                 <div className="block md:hidden absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
                     <Image
-                        src="/banner-mobile.jpg" // Nhớ đảm bảo bạn đã có file này
+                        src="/mobile-banner.png" // Nhớ đảm bảo bạn đã có file này
                         alt="Tram Cinema Mobile"
                         fill
                         className="object-contain object-center" // Ảnh dọc sẽ khớp với màn hình dọc

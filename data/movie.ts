@@ -1,6 +1,52 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 273,
+        title: "Frankenstein",
+        image: "https://i1-vnexpress.vnecdn.net/2025/11/12/frankenstein-1762952896.jpg?w=330&h=495&q=100&dpr=1&fit=crop&s=qrKo5Pg3-uhCseHrscG0yw",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "8aulMPhE12g",
+        new: true
+    },{
+        id: 272,
+        title: "Panor: Tà Thuật Huyết Ngải",
+        image: "https://cdn.galaxycine.vn/media/2025/3/19/panor-500_1742366645006.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "PFI1EkszP1o",
+        new: true
+    },{
+        id: 271,
+        title: "Yadang: Ba Mặt Lật Kèo",
+        image: "https://cdn.galaxycine.vn/media/2025/5/9/yadang-500_1746783491666.jpg",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "pH2izI5S2Kc",
+        new: true
+    },{
+        id: 270,
+        title: "SiSu - Già Gân Báo Thù 2",
+        image: "https://couplecinema.vn/wp-content/uploads/2025/12/itWues3GbmReREgtuPNEACvL628.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "IJkeEYcktAo",
+        new: true
+    },{
+        id: 269,
+        title: "Quan Tài Vợ Quỷ",
+        image: "https://cdn.galaxycine.vn/media/2025/6/19/quan-tai-vo-qu-500_1750327081229.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "z5d_g1MOgAk",
+        new: true
+    },
+    {
         id: 268,
         title: "Âm dương lộ 2025",
         image: "https://cdn.galaxycine.vn/media/2025/3/14/adl-500_1741934632272.jpg",
@@ -1755,6 +1801,158 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "zl7LlstHTio"
+    },{
+        id: 71,
+        title: "Gọi Hồn Quỷ Dữ",
+        image: "https://cdn.galaxycine.vn/media/2023/8/3/500x750_1691053002685.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "CfWw9ubDgKI"
+    },{
+        id: 70,
+        title: "Thánh vật của quỷ",
+        image: "https://cdn.galaxycine.vn/media/2023/2/8/300x450-q_1675830226477.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "oqHZFKBAiBw"
+    },{
+        id: 69,
+        title: "Mặt nạ quỷ",
+        image: "https://cdn.galaxycine.vn/media/2023/4/7/300x450_1680840617286.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "3MKRzG9k76Q"
+    },{
+        id: 68,
+        title: "Năm Đêm Kinh Hoàng",
+        image: "https://cdn.galaxycine.vn/media/2023/8/22/five-500_1692691061892.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "oZIaNznczVY"
+    },{
+        id: 67,
+        title: "Quỷ Cẩu",
+        image: "https://cdn.galaxycine.vn/media/2023/12/26/qc-500_1703563648819.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "aKwLkndLZtw"
+    },{
+        id: 66,
+        title: "Luyện Ngải: Cô Hồn Dã Quỷ",
+        image: "https://cdn.galaxycine.vn/media/2024/5/13/luyen-ngai-500_1715569977281.jpg",
+        category: "Kinh dị",
+        country: "Thái Lan",
+        type: "Vietsub",
+        youtubeId: "PEpy9UQatd4"
+    },{
+        id: 65,
+        title: "Blue Beetle",
+        image: "https://cdn.galaxycine.vn/media/2023/7/17/500x750-bb_1689566756939.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "kY-4x45tC0A"
+    },{
+        id: 64,
+        title: "Cô giáo em là số 1",
+        image: "https://cdn.galaxycine.vn/media/2023/11/9/500x750_1699500910364.jpg",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "VPG2OG_OgL0"
+    },{
+        id: 63,
+        title: "Quỷ lùn tinh nghịch - Đồng tâm hiệp nhạc",
+        image: "https://cdn.galaxycine.vn/media/2023/11/3/trolls-500_1699000954176.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "dvGFh-XdDgQ"
+    },{
+        id: 62,
+        title: "Đấu Trường Sinh Tử: Khúc Hát Của Chim Ca Và Rắn Độc",
+        image: "https://cdn.galaxycine.vn/media/2023/11/1/thg-500_1698821052668.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "hpTjTKo7q54"
+    },{
+        id: 61,
+        title: "Kẻ Kiến Tạo",
+        image: "https://cdn.galaxycine.vn/media/2023/9/29/500x750_1695961593994.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "MLUcZfI6dbU"
+    },{
+        id: 60,
+        title: "Phi vụ toàn sao",
+        image: "https://cdn.galaxycine.vn/media/2023/1/11/300x450_1673410451375.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "_27zRPq3954"
+    },{
+        id: 59,
+        title: "SiSu - Già Gân Báo Thù",
+        image: "https://cdn.galaxycine.vn/media/2023/4/28/300_1682666851796.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "InyuAyDUDJE"
+    },{
+        id: 58,
+        title: "Flash",
+        image: "https://cdn.galaxycine.vn/media/2023/5/22/300x450_1684739467824.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "fEKGQ91isng"
+    },{
+        id: 57,
+        title: "Heart of Stone",
+        image: "https://m.media-amazon.com/images/M/MV5BOTM5OTQ2ZTYtY2EzMC00Zjc3LTg3NWEtZWI4OTdlMjcwMGFlXkEyXkFqcGc@._V1_.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "XuDwndGaCFo"
+    },{
+        id: 56,
+        title: "Rebel Moon – Phần một: Người con của lửa",
+        image: "https://static.aircms.xyz/storage/images/rebel-moon-phan-mot-nguoi-con-cua-lua/rebel-moon-phan-mot-nguoi-con-cua-lua-thumb.webp",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Lồng tiếng",
+        youtubeId: "RBZcvbTyams "
+    },{
+        id: 55,
+        title: "Mùa Hè Kinh Hãi",
+        image: "https://cdn.galaxycine.vn/media/2025/7/10/mua-he-kinh-hai-500_1752130367601.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "NQeFJXBt8Ro "
+    },{
+        id: 54,
+        title: "Di Sản Ma Quái – Rosario (2025)",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/beLZhuHT97849WkWgty2X1hkWUa.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "gHalJwAHJC8 "
+    },{
+        id: 53,
+        title: "Phong Thần Bảng: Chiến hỏa tây kỳ 2",
+        image: "https://image.voh.com.vn/voh/image/2024/12/20/voh-phong-than-tam-bo-khuc-phan-2-5-092413.jpg?t=o&w=1600&q=85",
+        category: "Giật gân",
+        country: "Trung Quốc",
+        type: "Vietsub",
+        youtubeId: "vtCHhjYoeiU"
     },
     {
         id: 50,
@@ -1829,6 +2027,62 @@ const MOVIES = [
         type: "Vietsub",
         youtubeId: "iXdw5wYI4cY"
     },{
+        id: 41,
+        title: "Blood Shot",
+        image: "https://assets.glxplay.io/images/w600/title/bloodshot_web_posterPortrait_34478d720b3f97fd3a5353f5c0ddc433.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "2xmqGklHWLI"
+    },{
+        id: 40,
+        title: "Cười",
+        image: "https://cdn.galaxycine.vn/media/2022/9/5/1200wx1800h_1662347282801.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "W6veSPvtnI0"
+    },{
+        id: 39,
+        title: "578: Phát Đạn Của Kẻ Điên",
+        image: "https://cdn.galaxycine.vn/media/2022/4/21/1200x1800_1650510065525.jpg",
+        category: "Hành động",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "iB2ZH7hsWew"
+    },{
+        id: 38,
+        title: "Black Adam",
+        image: "https://cdn.galaxycine.vn/media/2022/9/26/900wx1350h_1664177555434.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "XBH5bmXOyUc"
+    },{
+        id: 37,
+        title: "Chiến Binh Báo Đen: Wakanda Bất Diệt",
+        image: "https://cdn.galaxycine.vn/media/2022/11/10/300x450_1668066486371.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "2Qcg6ZaSj8A"
+    },{
+        id: 36,
+        title: "Vận May",
+        image: "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_van_may_1_2_.jpg",
+        category: "Hài",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "8OEClvL6U-Y"
+    },{
+        id: 35,
+        title: "Kẻ đâm lén: Glass Onion",
+        image: "https://cdn.moveek.com/storage/media/cache/tall/6385c328b91af416863642.jpg",
+        category: "Hài",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "wbWgJT-8kEQ"
+    },{
         id: 20,
         title: "Hội ngộ diệu kỳ - CoCo",
         image: "https://cdn.galaxycine.vn/media/2020/10/6/900x1350_1601953430186.jpg",
@@ -1868,16 +2122,6 @@ const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "ACvEJobsJCA"
-    },
-    {
-        id: 0,
-        title: "Suzzanna: Lời nguyền đêm thứ Sáu",
-        image: "https://gaucafephim.vn/wp-content/uploads/2024/03/MV5BZGNkYmY2NzItNTE1NS00NWEzLTk5ZDktOWU5YzdhOWRmNTkxXkEyXkFqcGdeQXVyNTg2MDI2Njc@._V1_FMjpg_UX1000_-768x660.jpg",
-        category: "Kinh dị",
-        country: "Indonesia",
-        type: "Vietsub",
-        youtubeId: "W3OiJi8UyUk",
-        new: false
     }
 ];
 export default MOVIES
