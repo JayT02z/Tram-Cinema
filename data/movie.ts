@@ -2083,6 +2083,62 @@ const MOVIES = [
         type: "Vietsub",
         youtubeId: "wbWgJT-8kEQ"
     },{
+        id: 34,
+        title: "Lời nguyền tầm da",
+        image: "https://cdn.galaxycine.vn/media/2022/10/25/mal-de-ojo_1666681939302.jpg",
+        category: "Kinh dị",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "DIYklwQ9jgw"
+    },{
+        id: 33,
+        title: "Chạy Đua Với Tử Thần",
+        image: "https://cdn.galaxycine.vn/media/2024/8/9/drive-500_1723172538219.jpg",
+        category: "Giật gân",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "PCuYtJV4fgs"
+    },{
+        id: 32,
+        title: "Trận Chiến Sau Trận Chiến",
+        image: "https://cdn.galaxycine.vn/media/2025/9/15/tran-chien-sau-tran-chien-500_1757909554042.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "zHyJYY54LQk"
+    },{
+        id: 31,
+        title: "Thợ săn quỷ Kpop",
+        image: "https://upload.wikimedia.org/wikipedia/vi/9/93/KPDHposter.jpeg",
+        category: "Hành động",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "AzCAwdp1uIQ"
+    },{
+        id: 30,
+        title: "Sát thủ vô cùng cực hài",
+        image: "https://cdn.galaxycine.vn/media/2025/3/3/hitman-2-500_1740974318947.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "9d5FMHom5zY"
+    },{
+        id: 29,
+        title: "Khải thị – Revelations (2025)",
+        image: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ak0HlRVsVzh8mvwIUZpZr0z6uqW.jpg",
+        category: "Giật gân",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "5XcVSWOKVsY"
+    },{
+        id: 28,
+        title: "Sniper: The Last Stand",
+        image: "https://cdn.kinocheck.com/i/uwn35ikld1.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "YSwYhvG0Hy4"
+    },{
         id: 20,
         title: "Hội ngộ diệu kỳ - CoCo",
         image: "https://cdn.galaxycine.vn/media/2020/10/6/900x1350_1601953430186.jpg",
