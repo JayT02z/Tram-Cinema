@@ -1,6 +1,15 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 274,
+        title: "Đại Ca Ha Ha Ha",
+        image: "https://cdn.galaxycine.vn/media/2025/12/11/dai-ca-500_1765447898226.jpg",
+        category: "Hài",
+        country: "Hàn Quốc",
+        type: "Vietsub",
+        youtubeId: "DlD8xdH0e-M",
+        new: true
+    },{
         id: 273,
         title: "Frankenstein",
         image: "https://i1-vnexpress.vnecdn.net/2025/11/12/frankenstein-1762952896.jpg?w=330&h=495&q=100&dpr=1&fit=crop&s=qrKo5Pg3-uhCseHrscG0yw",
@@ -295,7 +304,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "c7FisB876Ek",
-        new: true
     },{
         id: 242,
         title: "Kẻ vô danh 2",
@@ -304,7 +312,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "rTpeRfGM23M",
-        new: true
     },{
         id: 241,
         title: "Phi Vụ Thế Kỷ 3: Thoắt Ẩn Thoắt Hiện – Now You See Me: Now You Don’t (2025)",
@@ -313,7 +320,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "hg2YUkIvAg0",
-        new: true
     },{
         id: 240,
         title: "Anh Trai Say Xe – The First Ride (2025)",
@@ -322,7 +328,6 @@ const MOVIES = [
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "uB94gXmcxR4",
-        new: true
     },
     {
         id: 239,
@@ -332,7 +337,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "GHwhgxthTFI",
-        new: true
     },{
         id: 238,
         title: "Trăm Dặm Tử Thần ",
@@ -341,7 +345,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "j_FghUMcBP0",
-        new: true
     },{
         id: 237,
         title: "Kế Hoạch Bảo Vệ Gia Đình 2",
@@ -350,7 +353,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "dqolYtJGuf4",
-        new: true
     },{
         id: 236,
         title: "Nhiệm vụ bất khả thi - Nghiệp báo cuối cùng",
@@ -359,7 +361,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "no2HdwAX8jI",
-        new: true
     },
     {
         id: 235,
@@ -369,7 +370,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "YwB1w3V5V3I",
-        new: true
     },{
         id: 234,
         title: "Thế giới khủng long: Tái sinh",
@@ -378,7 +378,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "F175sCpwXbo",
-        new: true
     },{
         id: 233,
         title: "The Conjuring: Nghi Lễ Cuối Cùng",
@@ -387,7 +386,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "sbsNPOzdBg0",
-        new: true
     },{
         id: 232,
         title: "Dính Lẹo – Together (2025)",
@@ -396,7 +394,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "bhd-CKFeXM0",
-        new: true
     },{
         id: 231,
         title: "28 năm sau hậu tận thế",
@@ -405,7 +402,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "fMrcIQZ4cto",
-        new: true
     },{
         id: 230,
         title: "Huyền Thoại – HIM (2025)",
@@ -414,7 +410,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "hpEy0iOixb4",
-        new: true
     },{
         id: 229,
         title: "Exit 8 - Ga Tàu Vô Tận",
@@ -423,7 +418,6 @@ const MOVIES = [
         country: "Nhật Bản",
         type: "Vietsub",
         youtubeId: "YXR0tMXhnog",
-        new: true
     },{
         id: 228,
         title: "Hồn ma giếng Suriram",
@@ -432,7 +426,6 @@ const MOVIES = [
         country: "Maylaysia",
         type: "Vietsub",
         youtubeId: "KQNnd-HSV2s",
-        new: true
     },
     {
         id: 227,
@@ -442,7 +435,6 @@ const MOVIES = [
         country: "Thái Lan",
         type: "Vietsub",
         youtubeId: "L7KuvLShQ_Y",
-        new: true
     },{
         id: 226,
         title: "Ga tử thần",
@@ -451,7 +443,6 @@ const MOVIES = [
         country: "Hàn Quốc",
         type: "Vietsub",
         youtubeId: "e6xGn8GvRNc",
-        new: true
     },{
         id: 225,
         title: "Đèn âm hồn",
@@ -460,7 +451,6 @@ const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "PWdeLkzoJ5s",
-        new: true
     },{
         id: 224,
         title: "Bộ tứ siêu đẳng",
@@ -469,7 +459,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "xJ3nz9_tj10",
-        new: true
     },{
         id: 223,
         title: "Mưa trên cánh bướm",
@@ -478,7 +467,6 @@ const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "EXhamQsxNqU",
-        new: true
     },{
         id: 222,
         title: "Hồn ma xác mẹ",
@@ -2154,6 +2142,14 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "JtdaIC1ifV8"
+    },{
+        id: 25,
+        title: "Troll: Quỷ núi khổng lồ 1",
+        image: "https://media.themoviedb.org/t/p/w220_and_h330_face/mchfYMnYpRSGMI2YlqDq9pAv1LV.jpg",
+        category: "Hành động",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "AiohkY_XQYQ"
     },{
         id: 20,
         title: "Hội ngộ diệu kỳ - CoCo",
