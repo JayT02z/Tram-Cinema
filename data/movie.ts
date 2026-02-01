@@ -1,6 +1,33 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 277,
+        title: "Khế Ước Bán Dâu",
+        image: "https://cdn.galaxycine.vn/media/2025/8/20/khe-uoc-ban-dau-500_1755662247349.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "5XYDm7Pj9EI",
+        new: true
+    },{
+        id: 276,
+        title: "Quỷ Nhập Tràng",
+        image: "https://cdn.galaxycine.vn/media/2025/3/3/quy-nhap-trang-sneak-500_1740997588972.jpg",
+        category: "Kinh dị",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "qOeNdCmKl3U",
+        new: true
+    },{
+        id: 275,
+        title: "Tử Chiến Trên Không",
+        image: "https://cdn.galaxycine.vn/media/2025/9/16/tu-chien-tren-khong-500_1757996261254.jpg",
+        category: "Hành động",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "dasVBQuL_nA",
+        new: true
+    },{
         id: 274,
         title: "Đại Ca Ha Ha Ha",
         image: "https://cdn.galaxycine.vn/media/2025/12/11/dai-ca-500_1765447898226.jpg",
@@ -172,7 +199,6 @@ const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "zKMOgOWn8lQ",
-        new: true
     },
     {
         id: 256,
@@ -182,7 +208,6 @@ const MOVIES = [
         country: "Việt Nam",
         type: "Gốc",
         youtubeId: "5b5oEQotzXo",
-        new: true
     },
     {
         id: 255,
@@ -192,7 +217,6 @@ const MOVIES = [
         country: "Nhật Bản",
         type: "Vietsub",
         youtubeId: "Qs-yOanuK9c",
-        new: true
     },
     {
         id: 254,
@@ -202,7 +226,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "4iWVnVg33Pc",
-        new: true
     },
     {
         id: 253,
@@ -212,7 +235,6 @@ const MOVIES = [
         country: "Nhật Bản",
         type: "Vietsub",
         youtubeId: "BSkUboiyeCo",
-        new: true
     },
     {
         id: 252,
@@ -222,7 +244,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "EgLJj6ua9fw",
-        new: true
     },
     {
         id: 251,
@@ -232,7 +253,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "9qhrQqijrOU",
-        new: true
     },{
         id: 250,
         title: "Natra 2: Ma đồng náo hải",
@@ -241,7 +261,6 @@ const MOVIES = [
         country: "Trung Quốc",
         type: "Vietsub",
         youtubeId: "ETlOSBR92Fs",
-        new: true
     },{
         id: 249,
         title: "Elio Cậu bé đến từ Trái đất",
@@ -250,7 +269,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "8qyk6dgwcKs",
-        new: true
     },{
         id: 248,
         title: "Quái Thú Đại Náo Sở Thú",
@@ -259,7 +277,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "FdqP73ZuNic",
-        new: true
     },{
         id: 247,
         title: "Bí Kíp Luyện Rồng",
@@ -268,7 +285,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "xpWLaHtfyxg",
-        new: true
     },{
         id: 246,
         title: "Thám Tử Lừng Danh Conan: Dư Ảnh Của Độc Nhãn",
@@ -277,7 +293,6 @@ const MOVIES = [
         country: "Nhật Bản",
         type: "Vietsub",
         youtubeId: "dz5mN-iIC4g",
-        new: true
     },{
         id: 245,
         title: "Xì Trum",
@@ -286,7 +301,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "wn-rx2oumsw",
-        new: true
     },{
         id: 244,
         title: "Quái Thú Vô Hình: Vùng Đất Chết Chóc – Predator: Badlands (2025)",
@@ -295,7 +309,6 @@ const MOVIES = [
         country: "Âu Mỹ",
         type: "Vietsub",
         youtubeId: "AzBi73ddou4",
-        new: true
     },{
         id: 243,
         title: "Minecraft: The Movie",
