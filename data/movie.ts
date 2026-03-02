@@ -1,6 +1,15 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 278,
+        title: "28 Năm Sau: Ngôi Đền Tử Thần",
+        image: "https://cdn.galaxycine.vn/media/2026/1/12/28-year-500_1768210133214.jpg",
+        category: "Giật Gân",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "rw_RL2F1l-A",
+        new: true
+    },{
         id: 277,
         title: "Khế Ước Bán Dâu",
         image: "https://cdn.galaxycine.vn/media/2025/8/20/khe-uoc-ban-dau-500_1755662247349.jpg",
