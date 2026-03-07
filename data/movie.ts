@@ -1,6 +1,15 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 279,
+        title: "Truy Tìm Long Diên Hương",
+        image: "https://cdn.galaxycine.vn/media/2025/11/13/long-dien-huong-500_1763018944757.jpg",
+        category: "Hành động",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "UZjZeUmxB-4",
+        new: true
+    },{
         id: 278,
         title: "28 Năm Sau: Ngôi Đền Tử Thần",
         image: "https://cdn.galaxycine.vn/media/2026/1/12/28-year-500_1768210133214.jpg",
