@@ -1,6 +1,15 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 280,
+        title: "Thiên đường máu",
+        image: "https://cdn.galaxycine.vn/media/2025/12/22/thien-duong-mau-500_1766385879783.jpg",
+        category: "Hành động",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "6d09Vip3ahE",
+        new: true
+    },{
         id: 279,
         title: "Truy Tìm Long Diên Hương",
         image: "https://cdn.galaxycine.vn/media/2025/11/13/long-dien-huong-500_1763018944757.jpg",
