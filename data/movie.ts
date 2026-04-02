@@ -1,6 +1,15 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 281,
+        title: "Cú Nhảy Kỳ Diệu",
+        image: "https://cdn.galaxycine.vn/media/2026/2/24/hoppers-500_1771926441222.jpg",
+        category: "Hoạt hình",
+        country: "Âu Mỹ",
+        type: "Vietsub",
+        youtubeId: "n0Pl1aNis4E",
+        new: true
+    },{
         id: 280,
         title: "Thiên đường máu",
         image: "https://cdn.galaxycine.vn/media/2025/12/22/thien-duong-mau-500_1766385879783.jpg",
