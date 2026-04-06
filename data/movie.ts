@@ -1,6 +1,15 @@
 // data/movies.ts
 const MOVIES = [
     {
+        id: 282,
+        title: "Nụ Hôn Bạc Tỷ",
+        image: "https://cdn.galaxycine.vn/media/2025/1/23/nu-hon-bac-t-500_1737617347176.jpg",
+        category: "Tình cảm",
+        country: "Việt Nam",
+        type: "Gốc",
+        youtubeId: "vUGel4p21yo",
+        new: true
+    },{
         id: 281,
         title: "Cú Nhảy Kỳ Diệu",
         image: "https://cdn.galaxycine.vn/media/2026/2/24/hoppers-500_1771926441222.jpg",
