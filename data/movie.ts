@@ -1,6 +1,17 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 286,
+    title: "Nhà Hai Chủ",
+    image:
+      "https://cdn.galaxycine.vn/media/2025/12/11/nha-hai-chu-500_1765425459372.jpg",
+    category: "Kinh dị",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "NyXRwQYykWU",
+    new: true,
+  },
+  {
     id: 285,
     title: "Nhà Mình Đi Thôi",
     image:
