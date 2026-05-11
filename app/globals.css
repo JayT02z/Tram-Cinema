@@ -1,44 +1,140 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════════════
+   TRẠM CINEMA — Art Deco Luxury Theater Aesthetic
+   Dark, dramatic, golden. Like walking into a 
+   1920s movie palace reborn for the digital age.
+   ═══════════════════════════════════════════════════ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette — deep midnight & burnished gold */
+  --bg-void: #07060b;
+  --bg-deep: #0d0c14;
+  --bg-surface: #141320;
+  --bg-card: #1a1830;
+  --bg-card-hover: #221f3a;
+  --bg-elevated: #252242;
+
+  /* Gold spectrum */
+  --gold-dim: #8b7635;
+  --gold: #d4a843;
+  --gold-bright: #f0c850;
+  --gold-light: #fce38a;
+  --gold-glow: rgba(212, 168, 67, 0.15);
+
+  /* Navy-blue brand accent */
+  --navy: #1b2a56;
+  --navy-light: #2d4380;
+
+  /* Text hierarchy */
+  --text-primary: #f0ece2;
+  --text-secondary: #a09b8c;
+  --text-muted: #6b6558;
+  --text-gold: var(--gold-bright);
+
+  /* Accents */
+  --accent-red: #e84545;
+  --accent-amber: #f59e0b;
+
+  /* Borders */
+  --border-subtle: rgba(212, 168, 67, 0.08);
+  --border-gold: rgba(212, 168, 67, 0.25);
+  --border-glow: rgba(212, 168, 67, 0.4);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px -4px rgba(0,0,0,0.6), 0 0 0 1px var(--border-subtle);
+  --shadow-card-hover: 0 8px 40px -8px rgba(212, 168, 67, 0.2), 0 0 0 1px var(--border-gold);
+  --shadow-modal: 0 24px 80px -16px rgba(0,0,0,0.9);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Sora', system-ui, sans-serif;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg-void);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base Reset ─── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim) var(--bg-deep);
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 3px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom animation utilities */
-@keyframes fade-in {
+/* ─── Film Grain Texture Overlay ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: var(--gold);
+  color: var(--bg-void);
+}
+
+/* ═══════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ═══════════════════════════════════════════════════ */
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(32px) scale(0.97);
   }
   to {
     opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-@keyframes slide-in-from-bottom {
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -46,10 +142,45 @@ body {
   }
 }
 
-@keyframes zoom-in {
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: var(--border-subtle); }
+  50% { border-color: var(--border-gold); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes revealMask {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes scaleReveal {
   from {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.85);
   }
   to {
     opacity: 1;
@@ -57,45 +188,68 @@ body {
   }
 }
 
-.animate-in {
-  animation-fill-mode: both;
+/* ═══════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════ */
+
+.font-display {
+  font-family: var(--font-display);
 }
 
-.fade-in {
-  animation-name: fade-in;
+.font-body {
+  font-family: var(--font-body);
 }
 
-.slide-in-from-bottom-8 {
-  animation-name: slide-in-from-bottom;
+.text-gold {
+  color: var(--gold-bright);
 }
 
-.zoom-in {
-  animation-name: zoom-in;
+.bg-gold-glow {
+  background: var(--gold-glow);
 }
 
-.duration-1000 {
-  animation-duration: 1000ms;
+/* Animated shimmer for loading / accents */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 168, 67, 0.08) 40%,
+    rgba(212, 168, 67, 0.15) 50%,
+    rgba(212, 168, 67, 0.08) 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
-.delay-300 {
-  animation-delay: 300ms;
+/* Gold ornamental divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-dim) 20%,
+    var(--gold) 50%,
+    var(--gold-dim) 80%,
+    transparent
+  );
 }
 
-.delay-500 {
-  animation-delay: 500ms;
+/* ─── Card Stagger Animations ─── */
+.card-stagger {
+  animation: fadeInUp 0.6s var(--ease-out-expo) both;
 }
 
-/* Hide scrollbar utility */
+/* ─── Hide scrollbar ─── */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* Line clamp utility */
+/* ─── Line clamp ─── */
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -103,3 +257,28 @@ body {
   -webkit-line-clamp: 1;
 }
 
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* ─── Custom focus rings ─── */
+.focus-gold:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════
+   MODAL ANIMATIONS
+   ═══════════════════════════════════════════════════ */
+
+.modal-backdrop {
+  animation: fadeIn 0.3s ease both;
+}
+
+.modal-content {
+  animation: scaleReveal 0.4s var(--ease-out-expo) both;
+  animation-delay: 0.1s;
+}

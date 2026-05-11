@@ -1,17 +1,18 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Film, Filter } from 'lucide-react';
 import MOVIES from "@/data/movie";
 
 export default function Home() {
     const [trailerId, setTrailerId] = useState<string | null>(null);
     const [isScrolled, setIsScrolled] = useState(false);
-
     const [filterCategory, setFilterCategory] = useState('All');
     const [filterCountry, setFilterCountry] = useState('All');
     const [filterType, setFilterType] = useState('All');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [hoveredId, setHoveredId] = useState<number | null>(null);
+    const mainRef = useRef<HTMLElement>(null);
 
     const categories = ['All', ...Array.from(new Set(MOVIES.map(m => m.category)))];
     const countries = ['All', ...Array.from(new Set(MOVIES.map(m => m.country)))];
@@ -22,217 +23,356 @@ export default function Home() {
             const matchCat = filterCategory === 'All' || movie.category === filterCategory;
             const matchCountry = filterCountry === 'All' || movie.country === filterCountry;
             const matchType = filterType === 'All' || movie.type === filterType;
-            return matchCat && matchCountry && matchType;
-        }).sort((a, b) => {
-            // Sắp xếp theo id giảm dần (phim mới nhất lên đầu)
-            return b.id - a.id;
-        });
-    }, [filterCategory, filterCountry, filterType]);
+            const matchSearch = searchQuery === '' || movie.title.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchCat && matchCountry && matchType && matchSearch;
+        }).sort((a, b) => b.id - a.id);
+    }, [filterCategory, filterCountry, filterType, searchQuery]);
 
-    // Handle scroll effect for header
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            setIsScrolled(scrollPosition > 100);
-        };
-
+        const handleScroll = () => setIsScrolled(window.scrollY > 80);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Scroll to the top of the movie list when filters are changed
     useEffect(() => {
-        const movieListElement = document.querySelector('main');
-        if (movieListElement) {
-            movieListElement.scrollIntoView({ behavior: 'smooth' });
+        if (mainRef.current) {
+            mainRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     }, [filterCategory, filterCountry, filterType]);
 
+    // Lock body scroll when modal open
+    useEffect(() => {
+        document.body.style.overflow = trailerId ? 'hidden' : '';
+        return () => { document.body.style.overflow = ''; };
+    }, [trailerId]);
+
+    const activeFilters = [filterCategory, filterCountry, filterType].filter(f => f !== 'All').length;
+
+    const resetFilters = () => {
+        setFilterCategory('All');
+        setFilterCountry('All');
+        setFilterType('All');
+        setSearchQuery('');
+    };
+
     return (
-        <div className="min-h-screen bg-gray-50 pb-32 font-sans">
-            {/* 1. Header - Fixed sticky header with dynamic background */}
-            <header className={`fixed top-0 left-0 right-0 z-30 backdrop-blur-md transition-all duration-500 ease-out ${
-                isScrolled 
-                    ? 'bg-black/90 shadow-xl border-b border-red-500/30 backdrop-blur-lg' 
-                    : 'bg-transparent hover:bg-black/30'
-            }`}>
-                {/* Top row - Brand and movie count */}
-                <div className="px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2 ">
-                        {/* Add a click handler to the logo to reload the page */}
-                        <div className={`p-2 rounded-lg text-white border transition-all duration-300 cursor-pointer ${
-                            isScrolled 
-                                ? 'bg-red-600 border-red-500' 
-                                : 'bg-red-600/80 backdrop-blur-sm border-white/20'
-                        }`} onClick={() => window.location.reload()}>
-                            <Film size={20}/>
+        <div className="min-h-screen relative" style={{ background: 'var(--bg-void)' }}>
+
+            {/* ═══ HEADER ═══ */}
+            <header
+                className="fixed top-0 left-0 right-0 z-40 transition-all duration-700"
+                style={{
+                    background: isScrolled
+                        ? 'linear-gradient(180deg, rgba(7,6,11,0.97) 0%, rgba(13,12,20,0.95) 100%)'
+                        : 'linear-gradient(180deg, rgba(7,6,11,0.8) 0%, transparent 100%)',
+                    borderBottom: isScrolled ? '1px solid var(--border-gold)' : '1px solid transparent',
+                    backdropFilter: isScrolled ? 'blur(20px) saturate(1.4)' : 'none',
+                }}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                    {/* Top bar */}
+                    <div className="flex items-center justify-between h-16">
+                        {/* Logo */}
+                        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center gap-3 group">
+                            <div className="relative w-9 h-9 rounded-lg overflow-hidden transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+                                style={{ border: '1.5px solid var(--gold-dim)', boxShadow: '0 0 16px rgba(212,168,67,0.15)' }}>
+                                <Image src="/logo.png" alt="Trạm Cinema" fill className="object-cover" sizes="36px" />
+                            </div>
+                            <div>
+                                <h1 className="font-display text-lg font-bold tracking-wide" style={{ color: 'var(--gold-bright)', fontFamily: 'var(--font-display)' }}>
+                                    TRẠM
+                                    <span style={{ color: 'var(--text-primary)', marginLeft: '6px', fontWeight: 400, letterSpacing: '0.15em', fontSize: '0.85em' }}>
+                                        CINEMA
+                                    </span>
+                                </h1>
+                            </div>
+                        </button>
+
+                        {/* Movie count + Contact */}
+                        <div className="flex items-center gap-3">
+                            <span className="hidden sm:block text-xs tracking-wider" style={{ color: 'var(--text-muted)' }}>
+                                0903 859 105
+                            </span>
+                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
+                                style={{ background: 'var(--gold-glow)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)' }}>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" /><line x1="7" y1="2" x2="7" y2="22" /><line x1="17" y1="2" x2="17" y2="22" /><line x1="2" y1="12" x2="22" y2="12" /><line x1="2" y1="7" x2="7" y2="7" /><line x1="2" y1="17" x2="7" y2="17" /><line x1="17" y1="7" x2="22" y2="7" /><line x1="17" y1="17" x2="22" y2="17" />
+                                </svg>
+                                {filteredMovies.length} phim
+                            </div>
                         </div>
-                        <h1 className="font-bold text-lg text-white drop-shadow-lg">Tram Cinema</h1>
                     </div>
-                    <div className={`text-xs font-medium text-white px-3 py-1 rounded-full border transition-all duration-300 ${
-                        isScrolled 
-                            ? 'bg-red-600/80 border-red-500/50' 
-                            : 'bg-white/20 backdrop-blur-sm border-white/30'
-                    }`}>
-                        {filteredMovies.length} phim
+
+                    {/* Filter bar */}
+                    <div className="pb-3 flex items-center gap-2 overflow-x-auto no-scrollbar" style={{ animation: 'slideDown 0.5s var(--ease-out-expo) both' }}>
+                        {/* Search */}
+                        <div className="relative min-w-[160px] sm:min-w-[200px]">
+                            <svg className="absolute left-3 top-1/2 -translate-y-1/2 opacity-40" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--gold)' }}>
+                                <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+                            </svg>
+                            <input
+                                type="text"
+                                value={searchQuery}
+                                onChange={e => setSearchQuery(e.target.value)}
+                                placeholder="Tìm phim..."
+                                className="w-full pl-9 pr-3 py-2 rounded-lg text-sm outline-none transition-all focus-gold"
+                                style={{
+                                    background: 'rgba(212,168,67,0.06)',
+                                    border: '1px solid var(--border-subtle)',
+                                    color: 'var(--text-primary)',
+                                    fontFamily: 'var(--font-body)',
+                                }}
+                            />
+                        </div>
+
+                        {[
+                            { value: filterCategory, setter: setFilterCategory, options: categories, label: 'Thể loại' },
+                            { value: filterCountry, setter: setFilterCountry, options: countries, label: 'Quốc gia' },
+                            { value: filterType, setter: setFilterType, options: types, label: 'Loại' },
+                        ].map(({ value, setter, options, label }) => (
+                            <select
+                                key={label}
+                                className="appearance-none text-sm font-medium rounded-lg py-2 px-4 outline-none cursor-pointer transition-all min-w-[110px] focus-gold"
+                                style={{
+                                    background: value !== 'All' ? 'rgba(212,168,67,0.12)' : 'rgba(212,168,67,0.04)',
+                                    border: value !== 'All' ? '1px solid var(--border-gold)' : '1px solid var(--border-subtle)',
+                                    color: value !== 'All' ? 'var(--gold-bright)' : 'var(--text-secondary)',
+                                    fontFamily: 'var(--font-body)',
+                                }}
+                                value={value}
+                                onChange={e => setter(e.target.value)}
+                            >
+                                {options.map(c => (
+                                    <option key={c} value={c} style={{ background: '#1a1830', color: '#f0ece2' }}>
+                                        {c === 'All' ? `Tất cả ${label.toLowerCase()}` : c}
+                                    </option>
+                                ))}
+                            </select>
+                        ))}
+
+                        {activeFilters > 0 && (
+                            <button
+                                onClick={resetFilters}
+                                className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-105"
+                                style={{ background: 'rgba(232,69,69,0.1)', border: '1px solid rgba(232,69,69,0.3)', color: '#e84545' }}
+                            >
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M18 6 6 18M6 6l12 12" /></svg>
+                                Xóa lọc
+                            </button>
+                        )}
                     </div>
-                </div>
-
-                {/* Bottom row - Filters */}
-                <div className="px-4 pb-3 flex gap-2 overflow-x-auto no-scrollbar">
-                    <select
-                        className={`appearance-none text-white font-medium text-sm border rounded-lg py-2 px-4 focus:ring-2 focus:ring-white/50 outline-none cursor-pointer transition-all min-w-[120px] ${
-                            isScrolled 
-                                ? 'bg-gray-800/80 border-gray-600 focus:bg-gray-700' 
-                                : 'bg-white/20 backdrop-blur-sm border-white/30 focus:bg-white/30'
-                        }`}
-                        value={filterCategory}
-                        onChange={(e) => setFilterCategory(e.target.value)}
-                    >
-                        {categories.map(c => <option key={c} value={c} className="text-gray-900 bg-white">{c === 'All' ? 'Tất cả thể loại' : c}</option>)}
-                    </select>
-
-                    <select
-                        className={`appearance-none text-white font-medium text-sm border rounded-lg py-2 px-4 focus:ring-2 focus:ring-white/50 outline-none cursor-pointer transition-all min-w-[100px] ${
-                            isScrolled 
-                                ? 'bg-gray-800/80 border-gray-600 focus:bg-gray-700' 
-                                : 'bg-white/20 backdrop-blur-sm border-white/30 focus:bg-white/30'
-                        }`}
-                        value={filterCountry}
-                        onChange={(e) => setFilterCountry(e.target.value)}
-                    >
-                        {countries.map(c => <option key={c} value={c} className="text-gray-900 bg-white">{c === 'All' ? 'Tất cả QG' : c}</option>)}
-                    </select>
-
-                    <select
-                        className={`appearance-none text-white font-medium text-sm border rounded-lg py-2 px-4 focus:ring-2 focus:ring-white/50 outline-none cursor-pointer transition-all min-w-[100px] ${
-                            isScrolled 
-                                ? 'bg-gray-800/80 border-gray-600 focus:bg-gray-700' 
-                                : 'bg-white/20 backdrop-blur-sm border-white/30 focus:bg-white/30'
-                        }`}
-                        value={filterType}
-                        onChange={(e) => setFilterType(e.target.value)}
-                    >
-                        {types.map(c => <option key={c} value={c} className="text-gray-900 bg-white">{c === 'All' ? 'Tất cả loại' : c}</option>)}
-                    </select>
                 </div>
             </header>
 
-            {/* --- ENHANCED HERO BANNER WITH EFFECTS --- */}
-            <section className="relative w-full h-screen bg-orange-400 overflow-hidden group">
-
-                {/* 1. ẢNH CHO MOBILE (Chỉ hiện khi màn hình nhỏ < 768px) */}
-                <div className="block md:hidden absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
-                    <Image
-                        src="/mobile-banner.png" // Nhớ đảm bảo bạn đã có file này
-                        alt="Tram Cinema Mobile"
-                        fill
-                        className="object-contain object-center" // Ảnh dọc sẽ khớp với màn hình dọc
-                        priority
-                        quality={100}
-                    />
+            {/* ═══ HERO BANNER ═══ */}
+            <section className="relative w-full overflow-hidden group" style={{ height: '100svh' }}>
+                {/* Desktop banner */}
+                <div className="hidden md:block absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-[1.03]">
+                    <Image src="/banner.png" alt="Trạm Cinema" fill className="object-cover object-center" priority quality={100} />
+                </div>
+                {/* Mobile banner */}
+                <div className="block md:hidden absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-[1.03]">
+                    <Image src="/mobile-banner.png" alt="Trạm Cinema Mobile" fill className="object-contain object-center" priority quality={100} />
                 </div>
 
-                {/* 2. ẢNH CHO DESKTOP (Chỉ hiện khi màn hình lớn >= 768px) */}
-                <div className="hidden md:block absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105">
-                    <Image
-                        src="/banner.png"
-                        alt="Tram Cinema Desktop"
-                        fill
-                        className="object-cover object-center"
-                        priority
-                        quality={100}
-                    />
+                {/* Cinematic gradient overlays */}
+                <div className="absolute inset-0 pointer-events-none" style={{
+                    background: 'linear-gradient(180deg, rgba(7,6,11,0.5) 0%, transparent 30%, transparent 60%, rgba(7,6,11,0.95) 100%)'
+                }} />
+                <div className="absolute inset-0 pointer-events-none opacity-30" style={{
+                    background: 'radial-gradient(ellipse at center, transparent 0%, rgba(7,6,11,0.8) 100%)'
+                }} />
+
+                {/* Floating golden particles */}
+                <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                    {[
+                        { top: '20%', left: '15%', size: 3, delay: 0, dur: 4 },
+                        { top: '35%', left: '75%', size: 2, delay: 1.5, dur: 5 },
+                        { top: '60%', left: '40%', size: 2, delay: 0.8, dur: 3.5 },
+                        { top: '75%', left: '85%', size: 3, delay: 2, dur: 4.5 },
+                        { top: '45%', left: '25%', size: 1.5, delay: 3, dur: 5.5 },
+                    ].map((p, i) => (
+                        <div key={i} className="absolute rounded-full" style={{
+                            top: p.top, left: p.left,
+                            width: p.size, height: p.size,
+                            background: 'var(--gold-bright)',
+                            animation: `float ${p.dur}s ease-in-out infinite, gentlePulse ${p.dur * 0.8}s ease-in-out infinite`,
+                            animationDelay: `${p.delay}s`,
+                            boxShadow: '0 0 8px var(--gold)',
+                        }} />
+                    ))}
                 </div>
 
-                {/* Gradient Overlay - Giữ nguyên hiệu ứng làm tối để chữ Header dễ đọc */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/40 pointer-events-none"></div>
-
-                {/* Animated particles - Giữ nguyên hiệu ứng đốm sáng */}
-                <div className="absolute inset-0 opacity-20 pointer-events-none">
-                    <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse delay-100"></div>
-                    <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-300"></div>
+                {/* Scroll-down indicator */}
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" style={{ animation: 'float 3s ease-in-out infinite' }}>
+                    <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: 'var(--gold-dim)' }}>Khám phá</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--gold-dim)' }}>
+                        <path d="m6 9 6 6 6-6" />
+                    </svg>
                 </div>
             </section>
-            {/* --- END ENHANCED HERO BANNER --- */}
 
-            {/* 2. Danh sách phim (Main Content) */}
-            <main className="pt-32 sm:pt-20 p-4 container mx-auto max-w-5xl">
-                {/* ... (Giữ nguyên nội dung bên trong Main) ... */}
+            {/* ═══ DECORATIVE DIVIDER ═══ */}
+            <div className="relative py-6">
+                <div className="gold-divider max-w-xl mx-auto" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6" style={{ background: 'var(--bg-void)' }}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold-dim)" opacity="0.6">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" />
+                    </svg>
+                </div>
+            </div>
+
+            {/* ═══ MOVIE GRID ═══ */}
+            <main ref={mainRef} className="px-4 sm:px-6 pb-32 max-w-7xl mx-auto">
+                {/* Section title */}
+                <div className="flex items-end justify-between mb-8">
+                    <div>
+                        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}>
+                            Phim <span style={{ color: 'var(--gold-bright)' }}>Đang Chiếu</span>
+                        </h2>
+                        <p className="mt-1 text-sm" style={{ color: 'var(--text-muted)' }}>
+                            Chọn phim yêu thích & xem trailer ngay
+                        </p>
+                    </div>
+                </div>
+
                 {filteredMovies.length === 0 ? (
-                    <div className="text-center py-20 text-gray-400">
-                        <Filter size={48} className="mx-auto mb-2 opacity-20"/>
-                        <p>Không tìm thấy phim nào</p>
+                    <div className="text-center py-24 rounded-2xl" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}>
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-4" style={{ color: 'var(--text-muted)' }}>
+                            <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /><path d="M8 11h6" />
+                        </svg>
+                        <p className="text-lg font-medium" style={{ color: 'var(--text-secondary)' }}>Không tìm thấy phim nào</p>
+                        <p className="text-sm mt-1" style={{ color: 'var(--text-muted)' }}>Thử thay đổi bộ lọc hoặc từ khóa tìm kiếm</p>
+                        <button onClick={resetFilters} className="mt-4 px-5 py-2 rounded-lg text-sm font-medium transition-all hover:scale-105"
+                            style={{ background: 'var(--gold-glow)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)' }}>
+                            Xóa bộ lọc
+                        </button>
                     </div>
                 ) : (
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                        {filteredMovies.map((movie) => {
-                            return (
-                                <div
-                                    key={movie.id}
-                                    // Click vào bất kỳ đâu trên card để mở trailer
-                                    onClick={() => setTrailerId(movie.youtubeId)}
-                                    className="relative group cursor-pointer rounded-xl transition-all duration-200 border-2 bg-white border-transparent hover:shadow-xl hover:border-red-500/30 hover:scale-105 transform"
-                                >
-                                    {/* Poster Area */}
-                                    <div className="aspect-[2/3] relative bg-gray-200 rounded-xl overflow-hidden">
-                                        <Image
-                                            src={movie.image}
-                                            alt={movie.title}
-                                            fill
-                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                            sizes="(max-width: 768px) 50vw, 25vw"
-                                        />
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5">
+                        {filteredMovies.map((movie, index) => (
+                            <div
+                                key={movie.id}
+                                onClick={() => setTrailerId(movie.youtubeId)}
+                                onMouseEnter={() => setHoveredId(movie.id)}
+                                onMouseLeave={() => setHoveredId(null)}
+                                className="card-stagger relative group cursor-pointer rounded-xl overflow-hidden transition-all duration-500"
+                                style={{
+                                    animationDelay: `${Math.min(index * 60, 600)}ms`,
+                                    background: 'var(--bg-card)',
+                                    border: hoveredId === movie.id ? '1px solid var(--border-gold)' : '1px solid var(--border-subtle)',
+                                    boxShadow: hoveredId === movie.id ? 'var(--shadow-card-hover)' : 'var(--shadow-card)',
+                                    transform: hoveredId === movie.id ? 'translateY(-6px) scale(1.02)' : 'translateY(0) scale(1)',
+                                }}
+                            >
+                                {/* Poster */}
+                                <div className="aspect-[2/3] relative overflow-hidden" style={{ background: 'var(--bg-surface)' }}>
+                                    <Image
+                                        src={movie.image}
+                                        alt={movie.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                                    />
 
-                                        {/* Badge: Quốc gia & Loại (Góc trên trái) */}
-                                        <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
-                                            <span className="text-[10px] font-bold bg-black/70 text-white px-2 py-0.5 rounded backdrop-blur-sm border border-white/20">
-                                                {movie.country}
-                                            </span>
-                                            <span className="text-[10px] font-bold bg-red-600 text-white px-2 py-0.5 rounded shadow-sm">
-                                                {movie.type}
-                                            </span>
-                                        </div>
-
-                                        {/* Dải băng "Mới" ở góc trên phải */}
-                                        {movie.new && (
-                                            <div className="absolute top-2 right-2 z-20">
-                                                <div className="bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg border-2 border-white transform -rotate-12 animate-pulse">
-                                                    MỚI
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {/* Overlay tối khi hover */}
-                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                                    {/* Top badges */}
+                                    <div className="absolute top-2 left-2 flex flex-col gap-1 items-start z-10">
+                                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-md"
+                                            style={{ background: 'rgba(7,6,11,0.75)', color: 'var(--gold-light)', border: '1px solid var(--border-gold)' }}>
+                                            {movie.country}
+                                        </span>
+                                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-md"
+                                            style={{ background: 'var(--navy)', color: '#ffffff', border: '1px solid var(--navy-light)' }}>
+                                            {movie.type}
+                                        </span>
                                     </div>
 
-                                    {/* Info Area */}
-                                    <div className="p-3">
-                                        <h3 className="font-bold text-sm text-gray-800 line-clamp-1">{movie.title}</h3>
-                                        <p className="text-xs text-gray-500 mt-1">{movie.category}</p>
+                                    {/* "New" badge */}
+                                    {movie.new && (
+                                        <div className="absolute top-2 right-2 z-10">
+                                            <div className="text-[9px] font-extrabold px-2 py-1 rounded-full shadow-lg -rotate-12"
+                                                style={{
+                                                    background: 'linear-gradient(135deg, var(--gold-bright), var(--gold))',
+                                                    color: 'var(--bg-void)',
+                                                    border: '2px solid var(--gold-light)',
+                                                    animation: 'gentlePulse 2s ease-in-out infinite',
+                                                    boxShadow: '0 2px 12px rgba(212,168,67,0.4)',
+                                                }}>
+                                                MỚI
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* Hover overlay with play button */}
+                                    <div className="absolute inset-0 flex items-center justify-center transition-all duration-500 opacity-0 group-hover:opacity-100"
+                                        style={{ background: 'linear-gradient(180deg, transparent 0%, rgba(7,6,11,0.7) 100%)' }}>
+                                        <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 scale-75 group-hover:scale-100"
+                                            style={{ background: 'rgba(212,168,67,0.9)', boxShadow: '0 0 30px rgba(212,168,67,0.5)' }}>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--bg-void)">
+                                                <polygon points="8,5 20,12 8,19" />
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
-                            );
-                        })}
+
+                                {/* Info */}
+                                <div className="p-3">
+                                    <h3 className="font-semibold text-sm line-clamp-1" style={{ color: 'var(--text-primary)' }}>
+                                        {movie.title}
+                                    </h3>
+                                    <p className="text-[11px] mt-1 font-medium" style={{ color: 'var(--gold-dim)' }}>
+                                        {movie.category}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 )}
             </main>
 
-            {/* 3. Modal Trailer */}
+            {/* ═══ FOOTER ═══ */}
+            <footer className="relative py-10" style={{ borderTop: '1px solid var(--border-subtle)' }}>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+                    <p className="text-sm font-medium" style={{ fontFamily: 'var(--font-display)', color: 'var(--gold-dim)' }}>
+                        TRẠM CINEMA
+                    </p>
+                    <p className="text-xs mt-2" style={{ color: 'var(--text-muted)' }}>
+                        139 Đường 28, Phường An Lạc, Hồ Chí Minh • 0903 859 105
+                    </p>
+                    <p className="text-[10px] mt-3" style={{ color: 'var(--text-muted)', opacity: 0.5 }}>
+                        © 2025 Trạm Cinema. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+
+            {/* ═══ TRAILER MODAL ═══ */}
             {trailerId && (
-                <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
-                    {/* ... nội dung modal ... */}
-                    <div className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20">
-                        {/* Youtube Embed */}
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop"
+                    style={{ background: 'rgba(0,0,0,0.92)', backdropFilter: 'blur(12px)' }}
+                    onClick={() => setTrailerId(null)}>
+
+                    {/* Close button */}
+                    <button
+                        className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 z-10"
+                        style={{ background: 'rgba(212,168,67,0.15)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)' }}
+                        onClick={(e) => { e.stopPropagation(); setTrailerId(null); }}
+                    >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                            <path d="M18 6 6 18M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div className="modal-content relative w-full max-w-5xl aspect-video rounded-2xl overflow-hidden"
+                        style={{ boxShadow: 'var(--shadow-modal)', border: '1px solid var(--border-gold)' }}
+                        onClick={e => e.stopPropagation()}>
                         <iframe
-                            src={`https://www.youtube.com/embed/${trailerId}?autoplay=1`}
+                            src={`https://www.youtube.com/embed/${trailerId}?autoplay=1&rel=0`}
                             className="w-full h-full"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
+                            style={{ background: '#000' }}
                         />
                     </div>
-                    <div className="absolute inset-0 -z-10" onClick={() => setTrailerId(null)}></div>
                 </div>
             )}
         </div>
