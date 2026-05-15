@@ -757,17 +757,6 @@ const MOVIES = [
     new: false,
   },
   {
-    id: 214,
-    title: "Giờ thả máu",
-    image:
-      "https://cdn.galaxycine.vn/media/2025/7/28/gio-tha-mau-500_1753695981985.jpg",
-    category: "Giật gân",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "eNdY0qpL20s",
-    new: false,
-  },
-  {
     id: 213,
     title: "Tôi Có Bệnh Mới Thích Cậu",
     image:
