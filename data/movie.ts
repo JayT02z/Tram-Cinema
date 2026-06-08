@@ -1,6 +1,17 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 287,
+    title: "Thỏ Ơi!!",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/2/10/tho-oi-500_1770696594579.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "XMv1Zhj5TQg",
+    new: true,
+  },
+  {
     id: 286,
     title: "Nhà Hai Chủ",
     image:
