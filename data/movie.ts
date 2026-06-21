@@ -1,6 +1,28 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 289,
+    title: "Báu Vật Trời Cho",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/2/2/bau-vat-troi-cho-2_1770022139575.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "gETH-cjsERs",
+    new: true,
+  },
+  {
+    id: 288,
+    title: "Út Lan: Oán Linh Giữ Của",
+    image:
+      "https://cdn.galaxycine.vn/media/2025/6/16/ut-lan-500_1750048341370.jpg",
+    category: "Kinh dị",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "v6QhbIUdMaQ",
+    new: true,
+  },
+  {
     id: 287,
     title: "Thỏ Ơi!!",
     image:
