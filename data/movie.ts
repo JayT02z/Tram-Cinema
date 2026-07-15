@@ -1,6 +1,116 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 299,
+    title: "100 Mét",
+    image:
+      "https://cdn.galaxycine.vn/media/2025/11/20/100-meters-500_1763613936832.jpg",
+    category: "Hoạt Hình",
+    country: "Nhật Bản",
+    type: "Vietsub",
+    youtubeId: "GNgK75OZ0mQ",
+    new: true,
+  },
+  {
+    id: 298,
+    title: "Áp Lực",
+    image:
+      "https://preview.redd.it/pressure-2026-review-the-good-the-bad-the-ugly-spoilers-v0-awfcf1cmn64h1.jpeg?width=640&crop=smart&auto=webp&s=79d6047aec7d7caa5a5659f7a3e6efada26cc79f",
+    category: "Giật gân",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "zdM4tdLQBg0",
+    new: true,
+  },
+  {
+    id: 297,
+    title: "Thỏ Gà Du Xuân: Đại Náo Địa Đạo",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/1/19/tho-ga-500_1768805974499.jpg",
+    category: "Hoạt hình",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "9eC0muty5Bo",
+    new: true,
+  },
+  {
+    id: 296,
+    title: "Đơn vị 731",
+    image:
+      "https://cdn.eventcinemas.co.nz/cdn/resources/movies/20640/images/largeposter.jpg",
+    category: "Giật gân",
+    country: "Trung Quốc",
+    type: "Vietsub",
+    youtubeId: "5WVTVf2YQ78",
+    new: true,
+  },
+  {
+    id: 295,
+    title: "Cá Con Cau Có",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/4/6/con-ca-cau-co-500_1775458864686.jpg",
+    category: "Hoạt hình",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "exssfoCXF5Y",
+    new: true,
+  },
+  {
+    id: 294,
+    title: "Hồ Nuốt Người",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/5/4/ma-da-han-quoc-500_1777864394869.jpg",
+    category: "Kinh dị",
+    country: "Hàn Quốc",
+    type: "Vietsub",
+    youtubeId: "iNDumpOBy88",
+    new: true,
+  },
+  {
+    id: 293,
+    title: "Khi Chồng Hợp Lực",
+    image:
+      "https://st.download.com.vn/data/image/2026/06/17/khi-chong-hop-luc-200.png",
+    category: "Hài",
+    country: "Hàn Quốc",
+    type: "Vietsub",
+    youtubeId: "PSJgwm2xcbI",
+    new: true,
+  },
+  {
+    id: 292,
+    title: "Quỷ Dữ Từ Luyện Ngục",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/4/1/kingkaew-500_1775014037622.jpg",
+    category: "Kinh dị",
+    country: "Thái Lan",
+    type: "Vietsub",
+    youtubeId: "yQVPK8KPcLA",
+    new: true,
+  },
+  {
+    id: 291,
+    title: "Hoàng Tử Quỷ",
+    image:
+      "https://cdn.galaxycine.vn/media/2025/11/25/hoang-tu-quy-500_1764065943970.jpg",
+    category: "Kinh dị",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "DqjjugELG28",
+    new: true,
+  },
+  {
+    id: 290,
+    title: "Linh Trưởng",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/1/8/linh-truong-500_1767857894381.jpg",
+    category: "Kinh dị",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "ccFtiXfwTLI",
+    new: true,
+  },
+  {
     id: 289,
     title: "Báu Vật Trời Cho",
     image:
@@ -211,13 +321,13 @@ const MOVIES = [
   },
   {
     id: 270,
-    title: "SiSu - Già Gân Báo Thù 2",
+    title: "Siêu Lừa Gặp Siêu Lầy",
     image:
-      "https://couplecinema.vn/wp-content/uploads/2025/12/itWues3GbmReREgtuPNEACvL628.jpg",
-    category: "Hành động",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "IJkeEYcktAo",
+      "https://cdn.galaxycine.vn/media/2023/3/3/300x450_1677813440300.jpg",
+    category: "Hài",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "NIVa1CCdFv4",
     new: true,
   },
   {
@@ -2374,15 +2484,6 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "_27zRPq3954",
-  },
-  {
-    id: 59,
-    title: "SiSu - Già Gân Báo Thù",
-    image: "https://cdn.galaxycine.vn/media/2023/4/28/300_1682666851796.jpg",
-    category: "Hành động",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "InyuAyDUDJE",
   },
   {
     id: 58,
