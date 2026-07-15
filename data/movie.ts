@@ -10,6 +10,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "GNgK75OZ0mQ",
     new: true,
+    duration: 106,
   },
   {
     id: 298,
@@ -21,6 +22,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "zdM4tdLQBg0",
     new: true,
+    duration: 100,
   },
   {
     id: 297,
@@ -32,6 +34,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "9eC0muty5Bo",
     new: true,
+    duration: 88,
   },
   {
     id: 296,
@@ -43,6 +46,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "5WVTVf2YQ78",
     new: true,
+    duration: 125,
   },
   {
     id: 295,
@@ -54,6 +58,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "exssfoCXF5Y",
     new: true,
+    duration: 90,
   },
   {
     id: 294,
@@ -65,6 +70,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "iNDumpOBy88",
     new: true,
+    duration: 95,
   },
   {
     id: 293,
@@ -76,6 +82,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "PSJgwm2xcbI",
     new: true,
+    duration: 109,
   },
   {
     id: 292,
@@ -87,6 +94,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "yQVPK8KPcLA",
     new: true,
+    duration: 101,
   },
   {
     id: 291,
@@ -98,6 +106,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "DqjjugELG28",
     new: true,
+    duration: 117,
   },
   {
     id: 290,
@@ -109,6 +118,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "ccFtiXfwTLI",
     new: true,
+    duration: 92,
   },
   {
     id: 289,
@@ -120,6 +130,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "gETH-cjsERs",
     new: true,
+    duration: 122,
   },
   {
     id: 288,
@@ -131,6 +142,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "v6QhbIUdMaQ",
     new: true,
+    duration: 111,
   },
   {
     id: 287,
@@ -142,6 +154,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "XMv1Zhj5TQg",
     new: true,
+    duration: 126,
   },
   {
     id: 286,
@@ -153,6 +166,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "NyXRwQYykWU",
     new: true,
+    duration: 101,
   },
   {
     id: 285,
@@ -164,6 +178,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "W07fNyJ40BE",
     new: true,
+    duration: 113,
   },
   {
     id: 284,
@@ -175,6 +190,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "6NlYCjzxikc",
     new: true,
+    duration: 107,
   },
   {
     id: 283,
@@ -186,6 +202,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "glgmAwRDP8s",
     new: true,
+    duration: 101,
   },
   {
     id: 282,
@@ -197,6 +214,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "vUGel4p21yo",
     new: true,
+    duration: 100,
   },
   {
     id: 281,
@@ -208,6 +226,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "n0Pl1aNis4E",
     new: true,
+    duration: 96,
   },
   {
     id: 280,
@@ -219,6 +238,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "6d09Vip3ahE",
     new: true,
+    duration: 112,
   },
   {
     id: 279,
@@ -230,6 +250,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "UZjZeUmxB-4",
     new: true,
+    duration: 104,
   },
   {
     id: 278,
@@ -241,6 +262,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "rw_RL2F1l-A",
     new: true,
+    duration: 109,
   },
   {
     id: 277,
@@ -252,6 +274,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "5XYDm7Pj9EI",
     new: true,
+    duration: 119,
   },
   {
     id: 276,
@@ -263,6 +286,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "qOeNdCmKl3U",
     new: true,
+    duration: 121,
   },
   {
     id: 275,
@@ -274,6 +298,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "dasVBQuL_nA",
     new: true,
+    duration: 117,
   },
   {
     id: 274,
@@ -285,6 +310,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "DlD8xdH0e-M",
     new: true,
+    duration: 97,
   },
   {
     id: 273,
@@ -296,6 +322,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "8aulMPhE12g",
     new: true,
+    duration: 152,
   },
   {
     id: 272,
@@ -307,6 +334,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "PFI1EkszP1o",
     new: true,
+    duration: 118,
   },
   {
     id: 271,
@@ -318,6 +346,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "pH2izI5S2Kc",
     new: true,
+    duration: 122,
   },
   {
     id: 270,
@@ -329,6 +358,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "NIVa1CCdFv4",
     new: true,
+    duration: 112,
   },
   {
     id: 269,
@@ -340,6 +370,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "z5d_g1MOgAk",
     new: true,
+    duration: 91,
   },
   {
     id: 268,
@@ -351,6 +382,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "GOeKx7L8yyk",
     new: true,
+    duration: 118,
   },
   {
     id: 267,
@@ -362,6 +394,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "D6vLPsyMSUY",
     new: true,
+    duration: 118,
   },
   {
     id: 266,
@@ -373,6 +406,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "ZsSYbAy2Ez8",
     new: true,
+    duration: 116,
   },
   {
     id: 265,
@@ -384,6 +418,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "lMH_cVX5pGI",
     new: true,
+    duration: 190,
   },
   {
     id: 264,
@@ -395,6 +430,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "KdZ6dH11PPA",
     new: true,
+    duration: 109,
   },
   {
     id: 263,
@@ -406,6 +442,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "qq4l_rficuw",
     new: true,
+    duration: 126,
   },
   {
     id: 262,
@@ -417,6 +454,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "yF2pXRJictA",
     new: true,
+    duration: 113,
   },
   {
     id: 261,
@@ -428,6 +466,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "BD6PoZJdt_M",
     new: true,
+    duration: 124,
   },
   {
     id: 260,
@@ -438,6 +477,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "QiXNbEKF3U0",
     new: true,
+    duration: 131,
   },
   {
     id: 259,
@@ -449,6 +489,7 @@ const MOVIES = [
     type: "Gốc",
     youtubeId: "xh6IDHjvytU",
     new: true,
+    duration: 126,
   },
   {
     id: 258,
@@ -460,6 +501,7 @@ const MOVIES = [
     type: "Vietsub",
     youtubeId: "WxrYCewy19A",
     new: true,
+    duration: 107,
   },
   {
     id: 257,
@@ -470,6 +512,7 @@ const MOVIES = [
     country: "Việt Nam",
     type: "Gốc",
     youtubeId: "zKMOgOWn8lQ",
+    duration: 133,
   },
   {
     id: 256,
@@ -480,6 +523,7 @@ const MOVIES = [
     country: "Việt Nam",
     type: "Gốc",
     youtubeId: "5b5oEQotzXo",
+    duration: 117,
   },
   {
     id: 255,
@@ -490,6 +534,7 @@ const MOVIES = [
     country: "Nhật Bản",
     type: "Vietsub",
     youtubeId: "Qs-yOanuK9c",
+    duration: 105,
   },
   {
     id: 254,
@@ -499,6 +544,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "4iWVnVg33Pc",
+    duration: 107,
   },
   {
     id: 253,
@@ -509,6 +555,7 @@ const MOVIES = [
     country: "Nhật Bản",
     type: "Vietsub",
     youtubeId: "BSkUboiyeCo",
+    duration: 155,
   },
   {
     id: 252,
@@ -519,6 +566,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "EgLJj6ua9fw",
+    duration: 108,
   },
   {
     id: 251,
@@ -529,6 +577,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "9qhrQqijrOU",
+    duration: 107,
   },
   {
     id: 250,
@@ -539,6 +588,7 @@ const MOVIES = [
     country: "Trung Quốc",
     type: "Vietsub",
     youtubeId: "ETlOSBR92Fs",
+    duration: 144,
   },
   {
     id: 249,
@@ -549,6 +599,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "8qyk6dgwcKs",
+    duration: 98,
   },
   {
     id: 248,
@@ -559,6 +610,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "FdqP73ZuNic",
+    duration: 92,
   },
   {
     id: 247,
@@ -569,6 +621,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "xpWLaHtfyxg",
+    duration: 126,
   },
   {
     id: 246,
@@ -579,6 +632,7 @@ const MOVIES = [
     country: "Nhật Bản",
     type: "Vietsub",
     youtubeId: "dz5mN-iIC4g",
+    duration: 110,
   },
   {
     id: 245,
@@ -589,6 +643,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "wn-rx2oumsw",
+    duration: 92,
   },
   {
     id: 244,
@@ -599,6 +654,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "AzBi73ddou4",
+    duration: 107,
   },
   {
     id: 243,
@@ -609,6 +665,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "c7FisB876Ek",
+    duration: 101,
   },
   {
     id: 242,
@@ -619,6 +676,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "rTpeRfGM23M",
+    duration: 90,
   },
   {
     id: 241,
@@ -630,6 +688,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "hg2YUkIvAg0",
+    duration: 112,
   },
   {
     id: 240,
@@ -640,6 +699,7 @@ const MOVIES = [
     country: "Hàn Quốc",
     type: "Vietsub",
     youtubeId: "uB94gXmcxR4",
+    duration: 110,
   },
   {
     id: 239,
@@ -650,6 +710,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "GHwhgxthTFI",
+
   },
   {
     id: 238,

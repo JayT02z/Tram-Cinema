@@ -4,6 +4,15 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import MOVIES from "@/data/movie";
 
+const formatDuration = (duration: number) => {
+    const hours = Math.floor(duration / 60);
+    const minutes = duration % 60;
+
+    if (hours === 0) return `${minutes} phút`;
+    if (minutes === 0) return `${hours} giờ`;
+    return `${hours} giờ ${minutes} phút`;
+};
+
 export default function Home() {
     const [trailerId, setTrailerId] = useState<string | null>(null);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -299,6 +308,27 @@ export default function Home() {
                                                     boxShadow: '0 2px 12px rgba(212,168,67,0.4)',
                                                 }}>
                                                 MỚI
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* Duration badge */}
+                                    {movie.duration && (
+                                        <div className="absolute bottom-2 right-2 z-10">
+                                            <div
+                                                className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-extrabold shadow-lg backdrop-blur-md"
+                                                style={{
+                                                    background: 'linear-gradient(135deg, rgba(7,6,11,0.92), rgba(26,24,48,0.86))',
+                                                    border: '1px solid var(--border-glow)',
+                                                    color: 'var(--gold-light)',
+                                                    boxShadow: '0 8px 22px rgba(0,0,0,0.45), 0 0 16px rgba(212,168,67,0.18)',
+                                                }}
+                                                aria-label={`Thời lượng ${formatDuration(movie.duration)}`}
+                                            >
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                                                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+                                                </svg>
+                                                <span className="whitespace-nowrap">{formatDuration(movie.duration)}</span>
                                             </div>
                                         </div>
                                     )}
