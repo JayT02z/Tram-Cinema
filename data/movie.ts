@@ -1,6 +1,17 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 300,
+    title: "Tài",
+    image: "https://cdn.galaxycine.vn/media/2026/2/27/tai_1772174772211.jpg",
+    category: "Hành động",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "mhgzESUI2s0",
+    new: true,
+    duration: 101,
+  },
+  {
     id: 299,
     title: "100 Mét",
     image:
@@ -351,8 +362,7 @@ const MOVIES = [
   {
     id: 270,
     title: "Siêu Lừa Gặp Siêu Lầy",
-    image:
-      "https://cdn.galaxycine.vn/media/2023/3/3/300x450_1677813440300.jpg",
+    image: "https://cdn.galaxycine.vn/media/2023/3/3/300x450_1677813440300.jpg",
     category: "Hài",
     country: "Việt Nam",
     type: "Gốc",
@@ -710,7 +720,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "GHwhgxthTFI",
-
+    duration: 102,
   },
   {
     id: 238,
@@ -721,6 +731,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "j_FghUMcBP0",
+    duration: 111,
   },
   {
     id: 237,
@@ -731,6 +742,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "dqolYtJGuf4",
+    duration: 95,
   },
   {
     id: 236,
@@ -741,6 +753,7 @@ const MOVIES = [
     country: "Âu Mỹ",
     type: "Vietsub",
     youtubeId: "no2HdwAX8jI",
+    duration: 157,
   },
   {
     id: 235,
