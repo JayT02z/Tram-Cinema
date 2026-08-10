@@ -16,7 +16,7 @@ const MOVIES = [
     title: "100 Mét",
     image:
       "https://cdn.galaxycine.vn/media/2025/11/20/100-meters-500_1763613936832.jpg",
-    category: "Hoạt Hình",
+    category: "Hoạt hình",
     country: "Nhật Bản",
     type: "Vietsub",
     youtubeId: "GNgK75OZ0mQ",
