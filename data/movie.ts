@@ -2779,16 +2779,6 @@ const MOVIES = [
     youtubeId: "wbWgJT-8kEQ",
   },
   {
-    id: 34,
-    title: "Lời nguyền tầm da",
-    image:
-      "https://cdn.galaxycine.vn/media/2022/10/25/mal-de-ojo_1666681939302.jpg",
-    category: "Kinh dị",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "DIYklwQ9jgw",
-  },
-  {
     id: 33,
     title: "Chạy Đua Với Tử Thần",
     image:
