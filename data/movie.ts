@@ -1864,26 +1864,6 @@ const MOVIES = [
     youtubeId: "PCMpdWADIzY",
   },
   {
-    id: 129,
-    title: "Quỷ thay đầu (Baghead)",
-    image:
-      "https://cdn.galaxycine.vn/media/2024/2/19/baghead-500_1708317004756.jpg",
-    category: "Kinh dị",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "RMPeNbgFbXg",
-  },
-  {
-    id: 128,
-    title: "Quỷ tha ma bắt",
-    image:
-      "https://cdn.galaxycine.vn/media/2025/5/29/qu-tha-ma-bat-500_1748503238035.jpg",
-    category: "Kinh dị",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "p76CjOjWf8Y",
-  },
-  {
     id: 127,
     title: "Mồ Tra Tấn",
     image:
