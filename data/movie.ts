@@ -1,6 +1,54 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 304,
+    title: "Anh Hùng",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/3/27/anh-hung-500_1774584875759.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "AkWB5BIc43c",
+    new: true,
+    duration: 122,
+  },
+  {
+    id: 303,
+    title: "Tàu Buôn Người",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/8/14/mutiny-500_1786677746210.jpg",
+    category: "Hành động",
+    country: "Âu Mỹ",
+    type: "vietsub",
+    youtubeId: "SJElX8y4Joc",
+    new: true,
+    duration: 95,
+  },
+  {
+    id: 302,
+    title: "Bầy Xác Sống",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/6/3/colony-500_1780479019386.jpg",
+    category: "Kinh dị",
+    country: "Hàn Quốc",
+    type: "Vietsub",
+    youtubeId: "YYFycg2c09o",
+    new: true,
+    duration: 122,
+  },
+  {
+    id: 301,
+    title: "Sư Thầy Gặp Sư Lầy",
+    image:
+      "https://cdn.galaxycine.vn/media/2025/11/4/su-thay-500_1762230345329.jpg",
+    category: "Hài",
+    country: "Thái Lan",
+    type: "Vietsub",
+    youtubeId: "1Z9awOnlHeU",
+    new: true,
+    duration: 90,
+  },
+  {
     id: 300,
     title: "Tài",
     image: "https://cdn.galaxycine.vn/media/2026/2/27/tai_1772174772211.jpg",
