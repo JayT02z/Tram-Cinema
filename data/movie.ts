@@ -1,6 +1,18 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 306,
+    title: "Cưới Vợ Cho Cha",
+    image:
+      "https://cdn.galaxycine.vn/media/2025/10/31/cuoi-vo-cho-cha-500_1761896461576.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "H9Vr4JAjfjI",
+    new: true,
+    duration: 112,
+  },
+  {
     id: 305,
     title: "Quỷ Nhập Tràng 2",
     image:
