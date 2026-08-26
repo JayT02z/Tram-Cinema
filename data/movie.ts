@@ -1,6 +1,18 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 305,
+    title: "Quỷ Nhập Tràng 2",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/2/26/quy-nhap-trang-2-500_1772097817869.jpg",
+    category: "Kinh dị",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "mDVmaQOOBPw",
+    new: true,
+    duration: 126,
+  },
+  {
     id: 304,
     title: "Anh Hùng",
     image:
