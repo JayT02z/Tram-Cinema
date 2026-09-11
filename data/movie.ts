@@ -1,6 +1,54 @@
 // data/movies.ts
 const MOVIES = [
   {
+    id: 310,
+    title: "Quái Vật Biển",
+    image:
+      "https://media.themoviedb.org/t/p/w600_and_h900_face/xdZ8k5s8DTwWyPBMIcflrYLgcAK.jpg",
+    category: "Giật gân",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "kcqeNF1xnGU",
+    new: true,
+    duration: 93,
+  },
+  {
+    id: 309,
+    title: "Hành Trình Của Moana",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/1/27/mui-pho-500_1769503813797.jpg",
+    category: "Hoạt hình",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "hTZT2vdFHp4",
+    new: true,
+    duration: 116,
+  },
+  {
+    id: 308,
+    title: "Mùi Phở",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/1/27/mui-pho-500_1769503813797.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "padED_JTQXA",
+    new: true,
+    duration: 111,
+  },
+  {
+    id: 307,
+    title: "Con Kể Ba Nghe",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/1/12/con-ke-ba-nghe-500_1768208656413.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "I6o3EWTGIXc",
+    new: true,
+    duration: 111,
+  },
+  {
     id: 306,
     title: "Cưới Vợ Cho Cha",
     image:
