@@ -16,7 +16,7 @@ const MOVIES = [
     id: 309,
     title: "Hành Trình Của Moana",
     image:
-      "https://cdn.galaxycine.vn/media/2026/1/27/mui-pho-500_1769503813797.jpg",
+      "https://cdn.galaxycine.vn/media/2026/3/26/moana-500_1774495216480.jpg",
     category: "Hoạt hình",
     country: "Âu Mỹ",
     type: "Vietsub",
