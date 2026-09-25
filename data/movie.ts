@@ -2,6 +2,78 @@
 const MOVIES = [
   {
     id: 310,
+    title: "Ngày Tàn Của Phố Oak",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/6/24/pho-oak-500_1782273857915.jpg",
+    category: "Giật gân",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "MwqWi3L4Kvk",
+    new: true,
+    duration: 100,
+  },
+  {
+    id: 315,
+    title: "Người Nhện: Khởi Đầu Mới",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/7/22/spiderman-brand-new-day-2_1784708394982.jpg",
+    category: "Hành động",
+    country: "Âu Mỹ",
+    type: "Vietsub",
+    youtubeId: "b_FbrHg9118",
+    new: true,
+    duration: 145,
+  },
+  {
+    id: 314,
+    title: "Ma Tù",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/8/11/ma-tu-500_1786439829483.jpg",
+    category: "Kinh dị",
+    country: "Indonesia",
+    type: "Vietsub",
+    youtubeId: "n8tqB1CUPQY",
+    new: true,
+    duration: 104,
+  },
+  {
+    id: 313,
+    title: "Song Hỷ Lâm Nguy",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/4/1/song-hy-lam-nguy-500_1775015079755.jpg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "oLcDyV6Ig6o",
+    new: true,
+    duration: 113,
+  },
+  {
+    id: 312,
+    title: "Ma Xó",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/5/29/ma-xo-2_1780061164303.jpg",
+    category: "Kinh dị",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "ic3Be4p-uVY",
+    new: true,
+    duration: 102,
+  },
+  {
+    id: 311,
+    title: "Hẹn Em Ngày Nhật Thực",
+    image:
+      "https://cdn.galaxycine.vn/media/2026/3/18/hen-em-ngay-nhat-thuc-500_1773826390908.jpgg",
+    category: "Tình cảm",
+    country: "Việt Nam",
+    type: "Gốc",
+    youtubeId: "Dm7GvYtWsYI",
+    new: true,
+    duration: 118,
+  },
+  {
+    id: 310,
     title: "Quái Vật Biển",
     image:
       "https://media.themoviedb.org/t/p/w600_and_h900_face/xdZ8k5s8DTwWyPBMIcflrYLgcAK.jpg",
@@ -936,16 +1008,6 @@ const MOVIES = [
     youtubeId: "hpEy0iOixb4",
   },
   {
-    id: 229,
-    title: "Exit 8 - Ga Tàu Vô Tận",
-    image:
-      "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AdqhED7D1k2QnzTqDiPTI9UTzfr.jpg",
-    category: "Kinh dị",
-    country: "Nhật Bản",
-    type: "Vietsub",
-    youtubeId: "YXR0tMXhnog",
-  },
-  {
     id: 228,
     title: "Hồn ma giếng Suriram",
     image:
@@ -954,16 +1016,6 @@ const MOVIES = [
     country: "Maylaysia",
     type: "Vietsub",
     youtubeId: "KQNnd-HSV2s",
-  },
-  {
-    id: 227,
-    title: "Cưới ma giải hạn",
-    image:
-      "https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/3/5/350x495-redenvelope.jpg",
-    category: "Kinh dị",
-    country: "Thái Lan",
-    type: "Vietsub",
-    youtubeId: "L7KuvLShQ_Y",
   },
   {
     id: 226,
