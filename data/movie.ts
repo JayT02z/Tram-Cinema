@@ -1,7 +1,7 @@
 // data/movies.ts
 const MOVIES = [
   {
-    id: 310,
+    id: 316,
     title: "Ngày Tàn Của Phố Oak",
     image:
       "https://cdn.galaxycine.vn/media/2026/6/24/pho-oak-500_1782273857915.jpg",
