@@ -12,18 +12,18 @@ const MOVIES = [
     new: true,
     duration: 100,
   },
-  {
-    id: 315,
-    title: "Người Nhện: Khởi Đầu Mới",
-    image:
-      "https://cdn.galaxycine.vn/media/2026/7/22/spiderman-brand-new-day-2_1784708394982.jpg",
-    category: "Hành động",
-    country: "Âu Mỹ",
-    type: "Vietsub",
-    youtubeId: "b_FbrHg9118",
-    new: true,
-    duration: 145,
-  },
+  // {
+  //   id: 315,
+  //   title: "Người Nhện: Khởi Đầu Mới",
+  //   image:
+  //     "https://cdn.galaxycine.vn/media/2026/7/22/spiderman-brand-new-day-2_1784708394982.jpg",
+  //   category: "Hành động",
+  //   country: "Âu Mỹ",
+  //   type: "Vietsub",
+  //   youtubeId: "b_FbrHg9118",
+  //   new: true,
+  //   duration: 145,
+  // },
   {
     id: 314,
     title: "Ma Tù",
